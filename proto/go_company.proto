@@ -1,0 +1,319 @@
+syntax = "proto3";
+package companyGrpc;
+option go_package = "/company";
+
+// сервис, который описывает все метод go_company
+service company {
+
+  rpc RatingInc(RatingIncRequestStruct) returns (RatingIncResponseStruct) {}
+  rpc RatingGet(RatingGetRequestStruct) returns (RatingGetResponseStruct) {}
+  rpc RatingGetByUserId(RatingGetByUserIdRequestStruct) returns (RatingGetByUserIdListResponseStruct) {}
+  rpc RatingGetEventCountByInterval(RatingGetEventCountByIntervalRequestStruct) returns (RatingGetEventCountByIntervalResponseStruct) {}
+  rpc RatingGetGeneralEventCountByInterval(RatingGetGeneralEventCountByIntervalRequestStruct) returns (RatingGetGeneralEventCountByIntervalResponseStruct) {}
+  rpc RatingForceSaveCache(RatingForceSaveCacheRequestStruct) returns (RatingForceSaveCacheResponseStruct) {}
+  rpc RatingSetUserBlockInSystemStatus(RatingSetUserBlockInSystemStatusRequestStruct) returns (RatingSetUserBlockInSystemStatusResponseStruct) {}
+  rpc RatingGetUserStatus(RatingGetUserStatusRequestStruct) returns (RatingGetUserStatusResponseStruct) {}
+  rpc RatingGetListByDay(RatingGetListByDayRequestStruct) returns (RatingGetListByDayResponseStruct) {}
+  rpc ReactionsAddInConversation(ReactionsAddInConversationRequestStruct) returns (ReactionsAddInConversationResponseStruct) {}
+  rpc ReactionsRemoveInConversation(ReactionsRemoveInConversationRequestStruct) returns (ReactionsRemoveInConversationResponseStruct) {}
+  rpc ReactionsAddInThread(ReactionsAddInThreadRequestStruct) returns (ReactionsAddInThreadResponseStruct) {}
+  rpc ReactionsRemoveInThread(ReactionsRemoveInThreadRequestStruct) returns (ReactionsRemoveInThreadResponseStruct) {}
+
+  rpc SystemStatus(SystemStatusRequestStruct) returns (SystemStatusResponseStruct) {}
+  rpc SystemTraceGoroutine(SystemTraceGoroutineRequestStruct) returns (SystemTraceGoroutineResponseStruct) {}
+  rpc SystemTraceMemory(SystemTraceMemoryRequestStruct) returns (SystemTraceMemoryResponseStruct) {}
+  rpc SystemCpuProfile(SystemCpuProfileRequestStruct) returns (SystemCpuProfileResponseStruct) {}
+  rpc SystemReloadConfig(SystemReloadConfigRequestStruct) returns (SystemReloadConfigResponseStruct) {}
+  rpc SystemReloadSharding(SystemReloadShardingRequestStruct) returns (SystemReloadShardingResponseStruct) {}
+  rpc SystemCheckSharding(SystemCheckShardingRequestStruct) returns (SystemCheckShardingResponseStruct) {}
+}
+
+// формат запроса для rating.Inc
+message RatingIncRequestStruct {
+  string event = 1;
+  int64 user_id = 2;
+  int64 inc = 3;
+  int64 company_id = 4;
+}
+
+// формат ответа для rating.Inc
+message RatingIncResponseStruct {}
+
+// формат запроса для rating.Get
+message RatingGetRequestStruct {
+  string event = 1;
+  int64 from_date_at = 2;
+  int64 to_date_at = 3;
+  int64 top_list_offset = 4;
+  int64 top_list_count = 5;
+  int64 company_id = 6;
+}
+
+// структура описания топа
+message TopItem {
+  int64 user_id = 1;
+  int64 position = 2;
+  int64 count = 3;
+  int64 is_disabled = 4;
+}
+
+// формат ответа для rating.Get
+message RatingGetResponseStruct {
+  int64 count = 1;
+  int64 updated_at = 2;
+  repeated TopItem top_list = 3;
+  int64 has_next = 4;
+}
+
+// структура для rating.GetByUserId
+message UserRating {
+  int64 user_id = 1;
+  int64 general_position = 2;
+  int64 year = 3;
+  map<string, int64> event_count_list = 4;
+  int64 general_count = 5;
+  int64 updated_at = 6;
+  int64 company_id = 7;
+}
+
+// формат запроса для rating.GetByUserId
+message RatingGetByUserIdRequestStruct {
+  int64 user_id = 1;
+  int64 year = 2;
+  repeated int64 from_date_at_list = 3;
+  repeated int64 to_date_at_list = 4;
+  repeated int64 is_from_cache_list = 5;
+  int64 company_id = 6;
+}
+
+// формат ответа для rating.GetByUserId
+message RatingGetByUserIdResponseStruct {
+  int64 user_id = 1;
+  int64 general_position = 2;
+  int64 year = 3;
+  map<string, int64> event_count_list = 4;
+  int64 general_count = 5;
+  int64 updated_at = 6;
+}
+
+message RatingGetByUserIdListResponseStruct {
+  repeated RatingGetByUserIdResponseStruct  user_rating_list = 1;
+}
+
+// формат запроса для rating.GetEventCountByInterval
+message RatingGetEventCountByIntervalRequestStruct {
+  string event = 1;
+  int64 year = 2;
+  int64 from_date_at = 3;
+  int64 to_date_at = 4;
+  int64 company_id = 5;
+}
+
+// структура для ответа rating.GetEventCountByInterval
+message EventCount {
+  int64 year = 1;
+  int64 day = 2;
+  int64 count = 3;
+}
+
+// формат ответа для rating.GetEventCountByInterval
+message RatingGetEventCountByIntervalResponseStruct {
+  repeated EventCount event_count_list = 1;
+}
+
+// формат запроса для rating.GetGeneralEventCountByInterval
+message RatingGetGeneralEventCountByIntervalRequestStruct {
+  int64 year = 1;
+  int64 from_date_at = 2;
+  int64 to_date_at = 3;
+  int64 company_id = 4;
+}
+
+// формат ответа для rating.GetGeneralEventCountByInterval
+message RatingGetGeneralEventCountByIntervalResponseStruct {
+  repeated EventCount event_count_list = 1;
+}
+
+// формат запроса для rating.ForceSaveCache
+message RatingForceSaveCacheRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат ответа для rating.ForceSaveCache
+message RatingForceSaveCacheResponseStruct {}
+
+// формат запроса для rating.SetUserBlockInSystemStatus
+message RatingSetUserBlockInSystemStatusRequestStruct{
+  int64 user_id = 1;
+  int64 status = 2;
+  int64 company_id = 3;
+}
+
+// формат ответа для rating.SetUserBlockInSystemStatus
+message RatingSetUserBlockInSystemStatusResponseStruct{}
+
+// формат запроса для rating.RatingGetUserStatus
+message RatingGetUserStatusRequestStruct{
+  int64 user_id = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для rating.RatingGetUserStatus
+message RatingGetUserStatusResponseStruct{
+  int32 status = 1;
+}
+
+// формат запроса для rating.GetListByDay
+message RatingGetListByDayRequestStruct{
+  int64 year = 1;
+  int64 day = 2;
+  int64 company_id = 3;
+}
+
+message UserDayStats {
+  int64 user_id = 1;
+  map<string, int64> data = 2;
+}
+
+// формат ответа для rating.GetListByDay
+message RatingGetListByDayResponseStruct{
+  repeated UserDayStats user_day_stats_list = 1;
+}
+
+// формат структуры версии события
+message EventVersionItem {
+  int32 version = 1;
+  bytes data = 2;
+}
+
+message ConversationReactionStruct {
+  string conversation_map = 1;
+  string message_map = 2;
+  int64 block_id = 3;
+  int64 block_message_index = 4;
+  int64 conversation_message_index = 5;
+  int64 reaction_uniq = 6;
+  string shard_id = 7;
+  int64 table_id = 8;
+  int64 user_id = 9;
+  int64 updated_at_ms = 10;
+  string ws_user_list = 11;
+  repeated EventVersionItem event_version_list = 12;
+  string ws_users = 13;
+  int64 is_ws_enabled = 14;
+  string reaction_name = 15;
+}
+
+// формат запроса для reactions.AddInConversation
+message ReactionsAddInConversationRequestStruct {
+  ConversationReactionStruct conversation_reaction = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для reactions.AddInConversation
+message ReactionsAddInConversationResponseStruct {}
+
+// формат запроса для reactions.RemoveInConversation
+message ReactionsRemoveInConversationRequestStruct {
+  ConversationReactionStruct conversation_reaction = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для reactions.RemoveInConversation
+message ReactionsRemoveInConversationResponseStruct {}
+
+message ThreadReactionStruct {
+  string thread_map = 1;
+  string message_map = 2;
+  int64 block_id = 3;
+  int64 block_message_index = 4;
+  int64 thread_message_index = 5;
+  int64 reaction_uniq = 6;
+  string shard_id = 7;
+  int64 table_id = 8;
+  int64 user_id = 9;
+  int64 updated_at_ms = 10;
+  string ws_user_list = 11;
+  repeated EventVersionItem event_version_list = 12;
+  string ws_users = 13;
+  int64 is_ws_enabled = 14;
+  string reaction_name = 15;
+}
+
+// формат запроса для reactions.AddInThread
+message ReactionsAddInThreadRequestStruct {
+  ThreadReactionStruct thread_reaction = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для reactions.AddInThread
+message ReactionsAddInThreadResponseStruct {}
+
+// формат запроса для reactions.RemoveInThread
+message ReactionsRemoveInThreadRequestStruct {
+  ThreadReactionStruct thread_reaction = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для reactions.RemoveInThread
+message ReactionsRemoveInThreadResponseStruct {}
+
+// формат запроса для system.status
+message SystemStatusRequestStruct {}
+
+// формат ответа для system.status
+message SystemStatusResponseStruct {
+  string name = 1;
+  int64 goroutines = 2;
+  int64 memory = 3;
+  string memory_kb = 4;
+  string memory_mb = 5;
+  int32 uptime = 6;
+}
+
+// формат запроса для system.traceGoroutine
+message SystemTraceGoroutineRequestStruct {}
+
+// формат ответа для system.traceGoroutine
+message SystemTraceGoroutineResponseStruct {}
+
+// формат запроса для system.traceMemory
+message SystemTraceMemoryRequestStruct {}
+
+// формат ответа для system.traceMemory
+message SystemTraceMemoryResponseStruct {}
+
+// формат запроса для system.cpuProfile
+message SystemCpuProfileRequestStruct {
+  int64 time = 1;
+}
+
+// формат ответа для system.cpuProfile
+message SystemCpuProfileResponseStruct {}
+
+// формат запроса для system.reloadConfig
+message SystemReloadConfigRequestStruct {}
+
+// формат ответа для system.reloadConfig
+message SystemReloadConfigResponseStruct {
+  int32 logging_level = 1;
+  string server_type = 2;
+  int64 current_dpc = 3;
+  int64 tcp_port = 4;
+  string rabbit_queue = 5;
+  string rabbit_exchange = 6;
+}
+
+// формат запроса для system.reloadSharding
+message SystemReloadShardingRequestStruct {}
+
+// формат ответа для system.reloadSharding
+message SystemReloadShardingResponseStruct {}
+
+// формат запроса для system.checkSharding
+message SystemCheckShardingRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат ответа для system.checkSharding
+message SystemCheckShardingResponseStruct {}

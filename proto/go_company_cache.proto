@@ -1,0 +1,283 @@
+syntax = "proto3";
+package companyCacheGrpc;
+option go_package = "/company_cache";
+
+// сервис, который описывает все метод go_company_cache
+service companyCache {
+
+  rpc SessionGetInfo(SessionGetInfoRequestStruct) returns (SessionGetInfoResponseStruct) {}
+  rpc SessionDeleteByUserId(SessionDeleteByUserIdRequestStruct) returns (SessionDeleteByUserIdResponseStruct) {}
+  rpc SessionDeleteBySessionUniq(SessionDeleteBySessionUniqRequestStruct) returns (SessionDeleteBySessionUniqResponseStruct) {}
+  rpc SessionGetListByUserId (SessionGetListByUserIdRequestStruct) returns (SessionGetListByUserIdResponseStruct) {}
+  rpc SessionClearCache(SessionClearCacheRequestStruct) returns (SessionClearCacheResponseStruct) {}
+
+  rpc SystemStatus(SystemStatusRequestStruct) returns (SystemStatusResponseStruct) {}
+  rpc SystemTraceGoroutine(SystemTraceGoroutineRequestStruct) returns (SystemTraceGoroutineResponseStruct) {}
+  rpc SystemTraceMemory(SystemTraceMemoryRequestStruct) returns (SystemTraceMemoryResponseStruct) {}
+  rpc SystemCpuProfile(SystemCpuProfileRequestStruct) returns (SystemCpuProfileResponseStruct) {}
+  rpc SystemReloadConfig(SystemReloadConfigRequestStruct) returns (SystemReloadConfigResponseStruct) {}
+  rpc SystemReloadSharding(SystemReloadShardingRequestStruct) returns (SystemReloadShardingResponseStruct) {}
+  rpc SystemCheckSharding(SystemCheckShardingRequestStruct) returns (SystemCheckShardingResponseStruct) {}
+
+  rpc MemberGetList(MemberGetListRequestStruct) returns (MemberGetListResponseStruct) {}
+  rpc MemberGetShortList(MemberGetShortListRequestStruct) returns (MemberGetShortListResponseStruct) {}
+  rpc MemberGetOne(MemberGetOneRequestStruct) returns (MemberGetOneResponseStruct) {}
+  rpc MemberDeleteFromCacheByUserId(MemberDeleteFromCacheByUserIdRequestStruct) returns (MemberDeleteFromCacheByUserIdResponseStruct) {}
+  rpc MemberDeleteFromCacheByUserIdList(MemberDeleteFromCacheByUserIdListRequestStruct) returns (MemberDeleteFromCacheByUserIdListResponseStruct) {}
+  rpc MemberClearCache(MemberClearCacheRequestStruct) returns (MemberClearCacheResponseStruct) {}
+
+  rpc ConfigGetList(ConfigGetListRequestStruct) returns (ConfigGetListResponseStruct) {}
+  rpc ConfigGetOne(ConfigGetOneRequestStruct) returns (ConfigGetOneResponseStruct) {}
+  rpc ConfigDeleteFromCacheByKey(ConfigDeleteFromCacheByKeyRequestStruct) returns (ConfigDeleteFromCacheByKeyResponseStruct) {}
+  rpc ConfigClearCache(ConfigClearCacheRequestStruct) returns (ConfigClearCacheResponseStruct) {}
+}
+
+// формат запроса для session.getInfo
+message SessionGetInfoRequestStruct {
+  string session_uniq = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для session.getInfo
+message SessionGetInfoResponseStruct {
+  int64 user_id = 1;
+  string ua_hash = 2;
+  string ip_address = 3;
+  string extra = 4;
+  MemberInfoStruct member = 5;
+}
+
+// формат запроса для session.getListByUserId
+message SessionGetListByUserIdRequestStruct {
+  int64 user_id = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для session.getListByUserId
+message SessionGetListByUserIdResponseStruct {
+  repeated string session_uniq_list = 1;
+}
+
+// формат запроса для session.deleteByUserId
+message SessionDeleteByUserIdRequestStruct {
+  int64 user_id = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для session.deleteByUserId
+message SessionDeleteByUserIdResponseStruct {}
+
+// формат запроса для session.deleteBySessionUniq
+message SessionDeleteBySessionUniqRequestStruct {
+  string session_uniq = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для session.deleteBySessionUniq
+message SessionDeleteBySessionUniqResponseStruct {}
+
+// формат запроса для session.clearCache
+message SessionClearCacheRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат ответа для session.clearCache
+message SessionClearCacheResponseStruct {}
+
+// формат запроса для system.status
+message SystemStatusRequestStruct {}
+
+// формат ответа для system.status
+message SystemStatusResponseStruct {
+  string name = 1;
+  int64 goroutines = 2;
+  int64 memory = 3;
+  string memory_kb = 4;
+  string memory_mb = 5;
+  int32 uptime = 6;
+}
+
+// формат запроса для system.traceGoroutine
+message SystemTraceGoroutineRequestStruct {}
+
+// формат ответа для system.traceGoroutine
+message SystemTraceGoroutineResponseStruct {}
+
+// формат запроса для system.traceMemory
+message SystemTraceMemoryRequestStruct {}
+
+// формат ответа для system.traceMemory
+message SystemTraceMemoryResponseStruct {}
+
+// формат запроса для system.cpuProfile
+message SystemCpuProfileRequestStruct {
+  int64 time = 1;
+}
+
+// формат ответа для system.cpuProfile
+message SystemCpuProfileResponseStruct {}
+
+// формат запроса для system.reloadConfig
+message SystemReloadConfigRequestStruct {}
+
+// формат ответа для system.reloadConfig
+message SystemReloadConfigResponseStruct {
+  int32 logging_level = 1;
+  string server_type = 2;
+  int64 tcp_port = 3;
+  int64 grpc_port = 4;
+  string rabbit_queue = 5;
+  string rabbit_exchange = 6;
+}
+
+// формат запроса для system.reloadSharding
+message SystemReloadShardingRequestStruct {}
+
+// формат ответа для system.reloadSharding
+message SystemReloadShardingResponseStruct {}
+
+// формат запроса для system.checkSharding
+message SystemCheckShardingRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат ответа для system.checkSharding
+message SystemCheckShardingResponseStruct {}
+
+// формат запроса для member.getList
+message MemberGetListRequestStruct {
+  repeated int64 user_id_list = 1;
+  int64 company_id = 2;
+}
+
+// формат запроса для config.getList
+message ConfigGetListRequestStruct {
+  repeated string key_list = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для member.getList
+message MemberGetListResponseStruct {
+  repeated MemberInfoStruct member_list = 1;
+  repeated int64 not_found_list = 2;
+}
+
+// формат ответа для config.getList
+message ConfigGetListResponseStruct {
+  repeated KeyInfoStruct key_list = 1;
+  repeated string not_found_list = 2;
+}
+
+// формат запроса для member.getShortList
+message MemberGetShortListRequestStruct {
+  repeated int64 user_id_list = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для member.getShortList
+message MemberGetShortListResponseStruct {
+  repeated MemberShortInfoStruct member_list = 1;
+  repeated int64 not_found_list = 2;
+}
+
+// формат запроса для member.getOne
+message MemberGetOneRequestStruct {
+  int64 user_id = 1;
+  int64 company_id = 2;
+}
+
+// формат запроса для config.getOne
+message ConfigGetOneRequestStruct {
+  string key = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для member.getOne
+message MemberGetOneResponseStruct {
+  MemberInfoStruct member = 1;
+  bool exist = 2;
+}
+
+// формат ответа для config.getOne
+message ConfigGetOneResponseStruct {
+  KeyInfoStruct key = 1;
+  bool exist = 2;
+}
+
+// структура записи конфига
+message KeyInfoStruct {
+  string key = 1;
+  int32 created_at = 2;
+  int32 updated_at = 3;
+  string value = 4;
+}
+
+// структура пользователя
+message MemberShortInfoStruct {
+  int64 user_id = 1;
+  int32 role = 2;
+  int32 npc_type = 3;
+  int32 permissions = 4;
+}
+
+// структура пользователя
+message MemberInfoStruct {
+  int64 user_id = 1;
+  int32 role = 2;
+  int32 npc_type = 3;
+  int32 permissions = 4;
+  int32 created_at = 5;
+  int32 updated_at = 6;
+  int32 company_joined_at = 7;
+  int32 fullname_updated_at = 8;
+  string fullname = 9;
+  string mbti_type = 10;
+  string short_description = 11;
+  string avatar_file_key = 12;
+  string comment = 13;
+  string extra = 14;
+  int32 left_at = 15;
+}
+
+// формат запроса для member.DeleteFromCacheByUserId
+message MemberDeleteFromCacheByUserIdRequestStruct {
+  int64 user_id = 1;
+  int64 company_id = 2;
+}
+
+// формат запроса для member.DeleteFromCacheByUserIdList
+message MemberDeleteFromCacheByUserIdListRequestStruct {
+  repeated int64 user_id_list = 1;
+  int64 company_id = 2;
+}
+
+// формат запроса для config.DeleteFromCacheByKey
+message ConfigDeleteFromCacheByKeyRequestStruct {
+  string key = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для member.DeleteFromCacheByUserId
+message MemberDeleteFromCacheByUserIdResponseStruct {}
+
+// формат ответа для member.DeleteFromCacheByUserIdList
+message MemberDeleteFromCacheByUserIdListResponseStruct {}
+
+// формат ответа для config.DeleteFromCacheByKey
+message ConfigDeleteFromCacheByKeyResponseStruct {}
+
+// формат запроса для member.clearCache
+message MemberClearCacheRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат запроса для config.clearCache
+message ConfigClearCacheRequestStruct {
+  int64 company_id = 1;
+}
+
+// формат ответа для member.clearCache
+message MemberClearCacheResponseStruct {}
+
+// формат ответа для config.clearCache
+message ConfigClearCacheResponseStruct {}

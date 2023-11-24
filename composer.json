@@ -1,0 +1,21 @@
+{
+	"name": "backend_compass_dev_2/company_protobuf_schemes",
+	"type": "library",
+	"description": "php_company_protobuf_schemes",
+	"autoload": {
+		"psr-4": {
+			"CompanyCacheGrpc\\": ["grpc/CompanyCacheGrpc", "php/CompanyCacheGrpc"],
+			"CompanyGrpc\\" : ["grpc/CompanyGrpc", "php/CompanyGrpc"],
+			"SenderGrpc\\": ["grpc/SenderGrpc", "php/SenderGrpc"],
+			"EventGrpc\\": ["grpc/EventGrpc", "php/EventGrpc"],
+			"RatingGrpc\\": ["grpc/RatingGrpc", "php/RatingGrpc"],
+			"GPBMetadata\\": "php/GPBMetadata"
+		}
+	},
+	"repositories":[
+		{
+			"type": "vcs",
+			"url": "https://github.com/getCompassUtils/company_protobuf_schemes"
+		}
+	]
+}
