@@ -47,6 +47,10 @@ class SenderSendIncomingCallRequestStruct extends \Google\Protobuf\Internal\Mess
      * Generated from protobuf field <code>int64 company_id = 8;</code>
      */
     protected $company_id = 0;
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     */
+    protected $channel = '';
 
     /**
      * Constructor.
@@ -62,6 +66,7 @@ class SenderSendIncomingCallRequestStruct extends \Google\Protobuf\Internal\Mess
      *     @type int|string $time_to_live
      *     @type string $routine_key
      *     @type int|string $company_id
+     *     @type string $channel
      * }
      */
     public function __construct($data = NULL) {
@@ -241,6 +246,28 @@ class SenderSendIncomingCallRequestStruct extends \Google\Protobuf\Internal\Mess
     {
         GPBUtil::checkInt64($var);
         $this->company_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     * @return string
+     */
+    public function getChannel()
+    {
+        return $this->channel;
+    }
+
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setChannel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->channel = $var;
 
         return $this;
     }
