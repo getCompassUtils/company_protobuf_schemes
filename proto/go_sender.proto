@@ -190,6 +190,7 @@ message SenderAddUsersToThreadRequestStruct {
   repeated int64 user_list = 2;
   string routine_key = 3;
   int64 company_id = 4;
+  string channel = 5;
 }
 
 // формат ответа для Sender.AddUsersToThread
