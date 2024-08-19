@@ -39,10 +39,6 @@ class SenderSetTokenRequestStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 company_id = 6;</code>
      */
     protected $company_id = 0;
-    /**
-     * Generated from protobuf field <code>string channel = 7;</code>
-     */
-    protected $channel = '';
 
     /**
      * Constructor.
@@ -56,7 +52,6 @@ class SenderSetTokenRequestStruct extends \Google\Protobuf\Internal\Message
      *     @type int|string $user_id
      *     @type int|string $expire
      *     @type int|string $company_id
-     *     @type string $channel
      * }
      */
     public function __construct($data = NULL) {
@@ -192,28 +187,6 @@ class SenderSetTokenRequestStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->company_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 7;</code>
-     * @return string
-     */
-    public function getChannel()
-    {
-        return $this->channel;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 7;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setChannel($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->channel = $var;
 
         return $this;
     }

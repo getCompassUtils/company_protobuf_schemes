@@ -19,6 +19,7 @@ service sender {
   rpc SenderGetOnlineUsers(SenderGetOnlineUsersRequestStruct) returns (SenderGetOnlineUsersResponseStruct) {}
   rpc SenderAddUsersToThread(SenderAddUsersToThreadRequestStruct) returns (SenderAddUsersToThreadResponseStruct) {}
   rpc SenderSendTypingEvent(SenderSendTypingEventRequestStruct) returns (SenderSendTypingEventResponseStruct) {}
+  rpc SenderSendThreadTypingEvent(SenderSendThreadTypingEventRequestStruct) returns (SenderSendThreadTypingEventResponseStruct) {}
   rpc SenderSendVoIP(SenderSendVoIPRequestStruct) returns (SenderSendVoIPResponseStruct) {}
   rpc SenderSendIncomingCall(SenderSendIncomingCallRequestStruct) returns (SenderSendIncomingCallResponseStruct) {}
   rpc ClearUserNotificationCache(ClearUserNotificationCacheRequestStruct) returns (ClearUserNotificationCacheResponseStruct) {}
@@ -86,7 +87,6 @@ message SenderSendEventRequestStruct {
   string uuid = 6;
   string routine_key = 7;
   int64 company_id = 8;
-  string channel = 9;
 }
 
 // формат ответа для Sender.SendEvent
@@ -102,7 +102,6 @@ message SenderSendEventToAllRequestStruct {
   string routine_key = 6;
   int64 is_need_push = 7;
   int64 company_id = 8;
-  string channel = 9;
 }
 
 // формат ответа для Sender.SendEventToAll
@@ -123,7 +122,6 @@ message ConnectionInfoStruct{
   string user_agent = 6;
   string platform = 7;
   int64 is_focused = 8;
-  string channel = 9;
 }
 
 // формат ответа для Sender.GetOnlineConnectionsByUserId
@@ -190,7 +188,6 @@ message SenderAddUsersToThreadRequestStruct {
   repeated int64 user_list = 2;
   string routine_key = 3;
   int64 company_id = 4;
-  string channel = 5;
 }
 
 // формат ответа для Sender.AddUsersToThread
@@ -203,11 +200,21 @@ message SenderSendTypingEventRequestStruct {
   repeated EventVersionItem event_version_list = 3;
   string routine_key = 4;
   int64 company_id = 5;
-  string channel = 6;
 }
 
 // формат ответа для Sender.SendTypingEvent
 message SenderSendTypingEventResponseStruct {}
+
+// формат запроса для Sender.SendThreadTypingEvent
+message SenderSendThreadTypingEventRequestStruct {
+  repeated int64 user_list = 1;
+  string event = 2;
+  repeated EventVersionItem event_version_list = 3;
+  int64 company_id = 4;
+}
+
+// формат ответа для Sender.SendThreadTypingEvent
+message SenderSendThreadTypingEventResponseStruct {}
 
 // формат запроса для Sender.SendVoIP
 message SenderSendVoIPRequestStruct {
@@ -242,7 +249,6 @@ message SenderSendIncomingCallRequestStruct {
   int64 time_to_live = 6;
   string routine_key = 7;
   int64 company_id = 8;
-  string channel = 9;
 }
 
 // формат ответа для Sender.SendIncomingCall

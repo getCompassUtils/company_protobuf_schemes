@@ -35,10 +35,6 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
      * Generated from protobuf field <code>int64 company_id = 5;</code>
      */
     protected $company_id = 0;
-    /**
-     * Generated from protobuf field <code>string channel = 6;</code>
-     */
-    protected $channel = '';
 
     /**
      * Constructor.
@@ -51,7 +47,6 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
      *     @type \SenderGrpc\EventVersionItem[]|\Google\Protobuf\Internal\RepeatedField $event_version_list
      *     @type string $routine_key
      *     @type int|string $company_id
-     *     @type string $channel
      * }
      */
     public function __construct($data = NULL) {
@@ -165,28 +160,6 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
     {
         GPBUtil::checkInt64($var);
         $this->company_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 6;</code>
-     * @return string
-     */
-    public function getChannel()
-    {
-        return $this->channel;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 6;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setChannel($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->channel = $var;
 
         return $this;
     }

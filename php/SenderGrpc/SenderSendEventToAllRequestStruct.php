@@ -47,10 +47,6 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      * Generated from protobuf field <code>int64 company_id = 8;</code>
      */
     protected $company_id = 0;
-    /**
-     * Generated from protobuf field <code>string channel = 9;</code>
-     */
-    protected $channel = '';
 
     /**
      * Constructor.
@@ -66,7 +62,6 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      *     @type string $routine_key
      *     @type int|string $is_need_push
      *     @type int|string $company_id
-     *     @type string $channel
      * }
      */
     public function __construct($data = NULL) {
@@ -246,28 +241,6 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
     {
         GPBUtil::checkInt64($var);
         $this->company_id = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 9;</code>
-     * @return string
-     */
-    public function getChannel()
-    {
-        return $this->channel;
-    }
-
-    /**
-     * Generated from protobuf field <code>string channel = 9;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setChannel($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->channel = $var;
 
         return $this;
     }

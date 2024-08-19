@@ -200,6 +200,20 @@ class senderClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \SenderGrpc\SenderSendThreadTypingEventRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \SenderGrpc\SenderSendThreadTypingEventResponseStruct
+     */
+    public function SenderSendThreadTypingEvent(\SenderGrpc\SenderSendThreadTypingEventRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/senderGrpc.sender/SenderSendThreadTypingEvent',
+        $argument,
+        ['\SenderGrpc\SenderSendThreadTypingEventResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \SenderGrpc\SenderSendVoIPRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
