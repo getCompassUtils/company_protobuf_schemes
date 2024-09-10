@@ -21,7 +21,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSetTokenRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSetTokenResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSetToken(\SenderGrpc\SenderSetTokenRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -35,7 +35,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSetConfigRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSetConfigResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSetConfig(\SenderGrpc\SenderSetConfigRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -49,7 +49,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderClearConfigRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderClearConfigResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderClearConfig(\SenderGrpc\SenderClearConfigRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -63,7 +63,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSendEventRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSendEventResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSendEvent(\SenderGrpc\SenderSendEventRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -77,7 +77,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSendEventToAllRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSendEventToAllResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSendEventToAll(\SenderGrpc\SenderSendEventToAllRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -91,7 +91,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderGetOnlineConnectionsByUserIdResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderGetOnlineConnectionsByUserId(\SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -105,7 +105,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderCloseConnectionsByUserIdResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderCloseConnectionsByUserId(\SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -119,7 +119,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderCloseConnectionsByUserIdWithWaitResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderCloseConnectionsByUserIdWithWait(\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -133,7 +133,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderCloseConnectionsByDeviceIdWithWait(\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -147,7 +147,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderAddTaskPushNotificationResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderAddTaskPushNotification(\SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -161,7 +161,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderGetOnlineUsersRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderGetOnlineUsersResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderGetOnlineUsers(\SenderGrpc\SenderGetOnlineUsersRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -175,7 +175,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderAddUsersToThreadRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderAddUsersToThreadResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderAddUsersToThread(\SenderGrpc\SenderAddUsersToThreadRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -189,7 +189,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSendTypingEventRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSendTypingEventResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSendTypingEvent(\SenderGrpc\SenderSendTypingEventRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -200,24 +200,10 @@ class senderClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \SenderGrpc\SenderSendThreadTypingEventRequestStruct $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \SenderGrpc\SenderSendThreadTypingEventResponseStruct
-     */
-    public function SenderSendThreadTypingEvent(\SenderGrpc\SenderSendThreadTypingEventRequestStruct $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/senderGrpc.sender/SenderSendThreadTypingEvent',
-        $argument,
-        ['\SenderGrpc\SenderSendThreadTypingEventResponseStruct', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \SenderGrpc\SenderSendVoIPRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSendVoIPResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSendVoIP(\SenderGrpc\SenderSendVoIPRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -231,7 +217,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SenderSendIncomingCallRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SenderSendIncomingCallResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SenderSendIncomingCall(\SenderGrpc\SenderSendIncomingCallRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -245,7 +231,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\ClearUserNotificationCacheRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\ClearUserNotificationCacheResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function ClearUserNotificationCache(\SenderGrpc\ClearUserNotificationCacheRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -259,7 +245,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SystemStatusRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SystemStatusResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SystemStatus(\SenderGrpc\SystemStatusRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -273,7 +259,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SystemTraceGoroutineRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SystemTraceGoroutineResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SystemTraceGoroutine(\SenderGrpc\SystemTraceGoroutineRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -287,7 +273,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SystemTraceMemoryRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SystemTraceMemoryResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SystemTraceMemory(\SenderGrpc\SystemTraceMemoryRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -301,7 +287,7 @@ class senderClient extends \Grpc\BaseStub {
      * @param \SenderGrpc\SystemCpuProfileRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \SenderGrpc\SystemCpuProfileResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SystemCpuProfile(\SenderGrpc\SystemCpuProfileRequestStruct $argument,
       $metadata = [], $options = []) {

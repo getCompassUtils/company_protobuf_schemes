@@ -45,6 +45,10 @@ class ConnectionInfoStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 is_focused = 8;</code>
      */
     protected $is_focused = 0;
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     */
+    protected $channel = '';
 
     /**
      * Constructor.
@@ -60,6 +64,7 @@ class ConnectionInfoStruct extends \Google\Protobuf\Internal\Message
      *     @type string $user_agent
      *     @type string $platform
      *     @type int|string $is_focused
+     *     @type string $channel
      * }
      */
     public function __construct($data = NULL) {
@@ -239,6 +244,28 @@ class ConnectionInfoStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->is_focused = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     * @return string
+     */
+    public function getChannel()
+    {
+        return $this->channel;
+    }
+
+    /**
+     * Generated from protobuf field <code>string channel = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setChannel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->channel = $var;
 
         return $this;
     }
