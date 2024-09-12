@@ -7,7 +7,7 @@ ENV PROTOBUF_VERSION 3.20.1
 ENV GRPC_VERSION 1.42.0
 
 ENV PHP_VERSION 8.1
-ENV GO_VERSION 1.16.14
+ENV GO_VERSION 1.17.7
 ENV PB_REL "https://github.com/protocolbuffers/protobuf/releases"
 ENV PROTONAME "protoc-${PROTOBUF_VERSION}-linux-x86_64"
 ENV HOME /home
