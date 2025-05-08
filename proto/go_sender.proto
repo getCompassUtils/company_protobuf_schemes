@@ -27,8 +27,11 @@ service sender {
   rpc SystemTraceGoroutine(SystemTraceGoroutineRequestStruct) returns (SystemTraceGoroutineResponseStruct) {}
   rpc SystemTraceMemory(SystemTraceMemoryRequestStruct) returns (SystemTraceMemoryResponseStruct) {}
   rpc SystemCpuProfile(SystemCpuProfileRequestStruct) returns (SystemCpuProfileResponseStruct) {}
-}
+  
+  // двунаправленный сервис отправки ws
+  rpc SenderSendEventBatching(SenderSendEventBatchingRequestStruct) returns (SenderSendEventBatchingResponseStruct) {}
 
+}
 
 // формат запроса для Sender.SetToken
 message SenderSetTokenRequestStruct{
@@ -92,6 +95,15 @@ message SenderSendEventRequestStruct {
 // формат ответа для Sender.SendEvent
 message SenderSendEventResponseStruct {}
 
+// формат запроса для Sender.SendEventBatching
+message SenderSendEventBatchingRequestStruct {
+  repeated SenderSendEventRequestStruct event_list = 1;
+  int64 company_id = 2;
+}
+
+// формат ответа для Sender.SendEvent
+message SenderSendEventBatchingResponseStruct {}
+
 // формат запроса для Sender.SendEventToAll
 message SenderSendEventToAllRequestStruct {
   string event = 1;
@@ -103,6 +115,7 @@ message SenderSendEventToAllRequestStruct {
   int64 is_need_push = 7;
   int64 company_id = 8;
   string channel = 9;
+  repeated int64 exclude_user_id_list = 10;
 }
 
 // формат ответа для Sender.SendEventToAll
