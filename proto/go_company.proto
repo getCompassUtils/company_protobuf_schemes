@@ -291,6 +291,7 @@ message ReadMessageAddRequestStruct {
   string message_key = 12;
   int32 db_shard = 13;
   bool is_force_show_participant = 14;
+  repeated int64 hide_read_participant_list = 15;
 }
 
 // формат ответа для ReadMessageAdd

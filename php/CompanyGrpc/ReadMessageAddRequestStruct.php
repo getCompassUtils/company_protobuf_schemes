@@ -71,6 +71,10 @@ class ReadMessageAddRequestStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_force_show_participant = 14;</code>
      */
     protected $is_force_show_participant = false;
+    /**
+     * Generated from protobuf field <code>repeated int64 hide_read_participant_list = 15;</code>
+     */
+    private $hide_read_participant_list;
 
     /**
      * Constructor.
@@ -92,6 +96,7 @@ class ReadMessageAddRequestStruct extends \Google\Protobuf\Internal\Message
      *     @type string $message_key
      *     @type int $db_shard
      *     @type bool $is_force_show_participant
+     *     @type int[]|string[]|\Google\Protobuf\Internal\RepeatedField $hide_read_participant_list
      * }
      */
     public function __construct($data = NULL) {
@@ -403,6 +408,28 @@ class ReadMessageAddRequestStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_force_show_participant = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int64 hide_read_participant_list = 15;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getHideReadParticipantList()
+    {
+        return $this->hide_read_participant_list;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int64 hide_read_participant_list = 15;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setHideReadParticipantList($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->hide_read_participant_list = $arr;
 
         return $this;
     }
