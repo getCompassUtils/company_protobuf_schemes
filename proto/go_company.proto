@@ -5,6 +5,8 @@ option go_package = "/company";
 // сервис, который описывает все метод go_company
 service company {
 
+  rpc RatingIncDayRatingEventCountForUser(RatingIncDayRatingEventCountForUserRequestStruct) returns (RatingIncDayRatingEventCountForUserResponseStruct) {}
+
   rpc RatingInc(RatingIncRequestStruct) returns (RatingIncResponseStruct) {}
   rpc RatingGet(RatingGetRequestStruct) returns (RatingGetResponseStruct) {}
   rpc RatingGetByUserId(RatingGetByUserIdRequestStruct) returns (RatingGetByUserIdListResponseStruct) {}
@@ -18,6 +20,7 @@ service company {
   rpc ReactionsRemoveInConversation(ReactionsRemoveInConversationRequestStruct) returns (ReactionsRemoveInConversationResponseStruct) {}
   rpc ReactionsAddInThread(ReactionsAddInThreadRequestStruct) returns (ReactionsAddInThreadResponseStruct) {}
   rpc ReactionsRemoveInThread(ReactionsRemoveInThreadRequestStruct) returns (ReactionsRemoveInThreadResponseStruct) {}
+  rpc ReadMessageAdd(ReadMessageAddRequestStruct) returns (ReadMessageAddResponseStruct) {}
 
   rpc SystemStatus(SystemStatusRequestStruct) returns (SystemStatusResponseStruct) {}
   rpc SystemTraceGoroutine(SystemTraceGoroutineRequestStruct) returns (SystemTraceGoroutineResponseStruct) {}
@@ -26,7 +29,21 @@ service company {
   rpc SystemReloadConfig(SystemReloadConfigRequestStruct) returns (SystemReloadConfigResponseStruct) {}
   rpc SystemReloadSharding(SystemReloadShardingRequestStruct) returns (SystemReloadShardingResponseStruct) {}
   rpc SystemCheckSharding(SystemCheckShardingRequestStruct) returns (SystemCheckShardingResponseStruct) {}
+
 }
+
+// формат запроса для Rating.IncDayRatingEventCountForUser
+message RatingIncDayRatingEventCountForUserRequestStruct {
+  int64 user_id = 1;
+  int64 year = 2;
+  int64 day = 3;
+  string event = 4;
+  int64 inc = 5;
+  int64 company_id = 6;
+}
+
+// формат ответа для Rating.IncDayRatingEventCountForUser
+message RatingIncDayRatingEventCountForUserResponseStruct {}
 
 // формат запроса для rating.Inc
 message RatingIncRequestStruct {
@@ -257,6 +274,28 @@ message ReactionsRemoveInThreadRequestStruct {
 
 // формат ответа для reactions.RemoveInThread
 message ReactionsRemoveInThreadResponseStruct {}
+
+// формат запроса для ReadMessageAdd
+message ReadMessageAddRequestStruct {
+  int64 company_id = 1;
+  string entity_type = 2;
+  string entity_map = 3;
+  int64 user_id = 4;
+  string message_map = 5;
+  int64 entity_message_index = 6;
+  int64 message_created_at = 7;
+  int64 read_at = 8;
+  int32 table_shard = 9;
+  int64 entity_meta_id = 10;
+  string entity_key = 11;
+  string message_key = 12;
+  int32 db_shard = 13;
+  bool is_force_show_participant = 14;
+  repeated int64 hide_read_participant_list = 15;
+}
+
+// формат ответа для ReadMessageAdd
+message ReadMessageAddResponseStruct {}
 
 // формат запроса для system.status
 message SystemStatusRequestStruct {}

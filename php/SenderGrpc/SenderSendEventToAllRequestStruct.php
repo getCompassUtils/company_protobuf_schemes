@@ -51,6 +51,10 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      * Generated from protobuf field <code>string channel = 9;</code>
      */
     protected $channel = '';
+    /**
+     * Generated from protobuf field <code>repeated int64 exclude_user_id_list = 10;</code>
+     */
+    private $exclude_user_id_list;
 
     /**
      * Constructor.
@@ -67,6 +71,7 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      *     @type int|string $is_need_push
      *     @type int|string $company_id
      *     @type string $channel
+     *     @type int[]|string[]|\Google\Protobuf\Internal\RepeatedField $exclude_user_id_list
      * }
      */
     public function __construct($data = NULL) {
@@ -268,6 +273,28 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
     {
         GPBUtil::checkString($var, True);
         $this->channel = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int64 exclude_user_id_list = 10;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getExcludeUserIdList()
+    {
+        return $this->exclude_user_id_list;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int64 exclude_user_id_list = 10;</code>
+     * @param int[]|string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setExcludeUserIdList($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->exclude_user_id_list = $arr;
 
         return $this;
     }

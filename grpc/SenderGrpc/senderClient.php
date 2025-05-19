@@ -297,4 +297,19 @@ class senderClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * двунаправленный сервис отправки ws
+     * @param \SenderGrpc\SenderSendEventBatchingRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SenderSendEventBatching(\SenderGrpc\SenderSendEventBatchingRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/senderGrpc.sender/SenderSendEventBatching',
+        $argument,
+        ['\SenderGrpc\SenderSendEventBatchingResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
 }

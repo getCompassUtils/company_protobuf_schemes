@@ -18,6 +18,20 @@ class companyClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \CompanyGrpc\RatingIncDayRatingEventCountForUserRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function RatingIncDayRatingEventCountForUser(\CompanyGrpc\RatingIncDayRatingEventCountForUserRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/companyGrpc.company/RatingIncDayRatingEventCountForUser',
+        $argument,
+        ['\CompanyGrpc\RatingIncDayRatingEventCountForUserResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \CompanyGrpc\RatingIncRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -196,6 +210,20 @@ class companyClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/companyGrpc.company/ReactionsRemoveInThread',
         $argument,
         ['\CompanyGrpc\ReactionsRemoveInThreadResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \CompanyGrpc\ReadMessageAddRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ReadMessageAdd(\CompanyGrpc\ReadMessageAddRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/companyGrpc.company/ReadMessageAdd',
+        $argument,
+        ['\CompanyGrpc\ReadMessageAddResponseStruct', 'decode'],
         $metadata, $options);
     }
 

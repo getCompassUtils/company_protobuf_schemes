@@ -24,6 +24,133 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// формат запроса для Rating.IncDayRatingEventCountForUser
+type RatingIncDayRatingEventCountForUserRequestStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId    int64  `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Year      int64  `protobuf:"varint,2,opt,name=year,proto3" json:"year,omitempty"`
+	Day       int64  `protobuf:"varint,3,opt,name=day,proto3" json:"day,omitempty"`
+	Event     string `protobuf:"bytes,4,opt,name=event,proto3" json:"event,omitempty"`
+	Inc       int64  `protobuf:"varint,5,opt,name=inc,proto3" json:"inc,omitempty"`
+	CompanyId int64  `protobuf:"varint,6,opt,name=company_id,json=companyId,proto3" json:"company_id,omitempty"`
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) Reset() {
+	*x = RatingIncDayRatingEventCountForUserRequestStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_company_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RatingIncDayRatingEventCountForUserRequestStruct) ProtoMessage() {}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_company_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RatingIncDayRatingEventCountForUserRequestStruct.ProtoReflect.Descriptor instead.
+func (*RatingIncDayRatingEventCountForUserRequestStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_company_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetUserId() int64 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetYear() int64 {
+	if x != nil {
+		return x.Year
+	}
+	return 0
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetDay() int64 {
+	if x != nil {
+		return x.Day
+	}
+	return 0
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetEvent() string {
+	if x != nil {
+		return x.Event
+	}
+	return ""
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetInc() int64 {
+	if x != nil {
+		return x.Inc
+	}
+	return 0
+}
+
+func (x *RatingIncDayRatingEventCountForUserRequestStruct) GetCompanyId() int64 {
+	if x != nil {
+		return x.CompanyId
+	}
+	return 0
+}
+
+// формат ответа для Rating.IncDayRatingEventCountForUser
+type RatingIncDayRatingEventCountForUserResponseStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *RatingIncDayRatingEventCountForUserResponseStruct) Reset() {
+	*x = RatingIncDayRatingEventCountForUserResponseStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_company_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RatingIncDayRatingEventCountForUserResponseStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RatingIncDayRatingEventCountForUserResponseStruct) ProtoMessage() {}
+
+func (x *RatingIncDayRatingEventCountForUserResponseStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_company_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RatingIncDayRatingEventCountForUserResponseStruct.ProtoReflect.Descriptor instead.
+func (*RatingIncDayRatingEventCountForUserResponseStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_company_proto_rawDescGZIP(), []int{1}
+}
+
 // формат запроса для rating.Inc
 type RatingIncRequestStruct struct {
 	state         protoimpl.MessageState
@@ -39,7 +166,7 @@ type RatingIncRequestStruct struct {
 func (x *RatingIncRequestStruct) Reset() {
 	*x = RatingIncRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[0]
+		mi := &file_proto_go_company_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -52,7 +179,7 @@ func (x *RatingIncRequestStruct) String() string {
 func (*RatingIncRequestStruct) ProtoMessage() {}
 
 func (x *RatingIncRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[0]
+	mi := &file_proto_go_company_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -65,7 +192,7 @@ func (x *RatingIncRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingIncRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingIncRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{0}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *RatingIncRequestStruct) GetEvent() string {
@@ -106,7 +233,7 @@ type RatingIncResponseStruct struct {
 func (x *RatingIncResponseStruct) Reset() {
 	*x = RatingIncResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[1]
+		mi := &file_proto_go_company_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -119,7 +246,7 @@ func (x *RatingIncResponseStruct) String() string {
 func (*RatingIncResponseStruct) ProtoMessage() {}
 
 func (x *RatingIncResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[1]
+	mi := &file_proto_go_company_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -132,7 +259,7 @@ func (x *RatingIncResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingIncResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingIncResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{1}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{3}
 }
 
 // формат запроса для rating.Get
@@ -152,7 +279,7 @@ type RatingGetRequestStruct struct {
 func (x *RatingGetRequestStruct) Reset() {
 	*x = RatingGetRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[2]
+		mi := &file_proto_go_company_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -165,7 +292,7 @@ func (x *RatingGetRequestStruct) String() string {
 func (*RatingGetRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[2]
+	mi := &file_proto_go_company_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -178,7 +305,7 @@ func (x *RatingGetRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{2}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *RatingGetRequestStruct) GetEvent() string {
@@ -238,7 +365,7 @@ type TopItem struct {
 func (x *TopItem) Reset() {
 	*x = TopItem{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[3]
+		mi := &file_proto_go_company_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -251,7 +378,7 @@ func (x *TopItem) String() string {
 func (*TopItem) ProtoMessage() {}
 
 func (x *TopItem) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[3]
+	mi := &file_proto_go_company_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -264,7 +391,7 @@ func (x *TopItem) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TopItem.ProtoReflect.Descriptor instead.
 func (*TopItem) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{3}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *TopItem) GetUserId() int64 {
@@ -310,7 +437,7 @@ type RatingGetResponseStruct struct {
 func (x *RatingGetResponseStruct) Reset() {
 	*x = RatingGetResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[4]
+		mi := &file_proto_go_company_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -323,7 +450,7 @@ func (x *RatingGetResponseStruct) String() string {
 func (*RatingGetResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[4]
+	mi := &file_proto_go_company_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -336,7 +463,7 @@ func (x *RatingGetResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{4}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *RatingGetResponseStruct) GetCount() int64 {
@@ -385,7 +512,7 @@ type UserRating struct {
 func (x *UserRating) Reset() {
 	*x = UserRating{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[5]
+		mi := &file_proto_go_company_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -398,7 +525,7 @@ func (x *UserRating) String() string {
 func (*UserRating) ProtoMessage() {}
 
 func (x *UserRating) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[5]
+	mi := &file_proto_go_company_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -411,7 +538,7 @@ func (x *UserRating) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserRating.ProtoReflect.Descriptor instead.
 func (*UserRating) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{5}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *UserRating) GetUserId() int64 {
@@ -480,7 +607,7 @@ type RatingGetByUserIdRequestStruct struct {
 func (x *RatingGetByUserIdRequestStruct) Reset() {
 	*x = RatingGetByUserIdRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[6]
+		mi := &file_proto_go_company_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -493,7 +620,7 @@ func (x *RatingGetByUserIdRequestStruct) String() string {
 func (*RatingGetByUserIdRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetByUserIdRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[6]
+	mi := &file_proto_go_company_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -506,7 +633,7 @@ func (x *RatingGetByUserIdRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetByUserIdRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetByUserIdRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{6}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *RatingGetByUserIdRequestStruct) GetUserId() int64 {
@@ -568,7 +695,7 @@ type RatingGetByUserIdResponseStruct struct {
 func (x *RatingGetByUserIdResponseStruct) Reset() {
 	*x = RatingGetByUserIdResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[7]
+		mi := &file_proto_go_company_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -581,7 +708,7 @@ func (x *RatingGetByUserIdResponseStruct) String() string {
 func (*RatingGetByUserIdResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetByUserIdResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[7]
+	mi := &file_proto_go_company_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -594,7 +721,7 @@ func (x *RatingGetByUserIdResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetByUserIdResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetByUserIdResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{7}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *RatingGetByUserIdResponseStruct) GetUserId() int64 {
@@ -650,7 +777,7 @@ type RatingGetByUserIdListResponseStruct struct {
 func (x *RatingGetByUserIdListResponseStruct) Reset() {
 	*x = RatingGetByUserIdListResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[8]
+		mi := &file_proto_go_company_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -663,7 +790,7 @@ func (x *RatingGetByUserIdListResponseStruct) String() string {
 func (*RatingGetByUserIdListResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetByUserIdListResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[8]
+	mi := &file_proto_go_company_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -676,7 +803,7 @@ func (x *RatingGetByUserIdListResponseStruct) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use RatingGetByUserIdListResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetByUserIdListResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{8}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *RatingGetByUserIdListResponseStruct) GetUserRatingList() []*RatingGetByUserIdResponseStruct {
@@ -702,7 +829,7 @@ type RatingGetEventCountByIntervalRequestStruct struct {
 func (x *RatingGetEventCountByIntervalRequestStruct) Reset() {
 	*x = RatingGetEventCountByIntervalRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[9]
+		mi := &file_proto_go_company_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -715,7 +842,7 @@ func (x *RatingGetEventCountByIntervalRequestStruct) String() string {
 func (*RatingGetEventCountByIntervalRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetEventCountByIntervalRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[9]
+	mi := &file_proto_go_company_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -728,7 +855,7 @@ func (x *RatingGetEventCountByIntervalRequestStruct) ProtoReflect() protoreflect
 
 // Deprecated: Use RatingGetEventCountByIntervalRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetEventCountByIntervalRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{9}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *RatingGetEventCountByIntervalRequestStruct) GetEvent() string {
@@ -780,7 +907,7 @@ type EventCount struct {
 func (x *EventCount) Reset() {
 	*x = EventCount{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[10]
+		mi := &file_proto_go_company_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -793,7 +920,7 @@ func (x *EventCount) String() string {
 func (*EventCount) ProtoMessage() {}
 
 func (x *EventCount) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[10]
+	mi := &file_proto_go_company_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -806,7 +933,7 @@ func (x *EventCount) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EventCount.ProtoReflect.Descriptor instead.
 func (*EventCount) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{10}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *EventCount) GetYear() int64 {
@@ -842,7 +969,7 @@ type RatingGetEventCountByIntervalResponseStruct struct {
 func (x *RatingGetEventCountByIntervalResponseStruct) Reset() {
 	*x = RatingGetEventCountByIntervalResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[11]
+		mi := &file_proto_go_company_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -855,7 +982,7 @@ func (x *RatingGetEventCountByIntervalResponseStruct) String() string {
 func (*RatingGetEventCountByIntervalResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetEventCountByIntervalResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[11]
+	mi := &file_proto_go_company_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -868,7 +995,7 @@ func (x *RatingGetEventCountByIntervalResponseStruct) ProtoReflect() protoreflec
 
 // Deprecated: Use RatingGetEventCountByIntervalResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetEventCountByIntervalResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{11}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *RatingGetEventCountByIntervalResponseStruct) GetEventCountList() []*EventCount {
@@ -893,7 +1020,7 @@ type RatingGetGeneralEventCountByIntervalRequestStruct struct {
 func (x *RatingGetGeneralEventCountByIntervalRequestStruct) Reset() {
 	*x = RatingGetGeneralEventCountByIntervalRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[12]
+		mi := &file_proto_go_company_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -906,7 +1033,7 @@ func (x *RatingGetGeneralEventCountByIntervalRequestStruct) String() string {
 func (*RatingGetGeneralEventCountByIntervalRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetGeneralEventCountByIntervalRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[12]
+	mi := &file_proto_go_company_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -919,7 +1046,7 @@ func (x *RatingGetGeneralEventCountByIntervalRequestStruct) ProtoReflect() proto
 
 // Deprecated: Use RatingGetGeneralEventCountByIntervalRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetGeneralEventCountByIntervalRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{12}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *RatingGetGeneralEventCountByIntervalRequestStruct) GetYear() int64 {
@@ -962,7 +1089,7 @@ type RatingGetGeneralEventCountByIntervalResponseStruct struct {
 func (x *RatingGetGeneralEventCountByIntervalResponseStruct) Reset() {
 	*x = RatingGetGeneralEventCountByIntervalResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[13]
+		mi := &file_proto_go_company_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -975,7 +1102,7 @@ func (x *RatingGetGeneralEventCountByIntervalResponseStruct) String() string {
 func (*RatingGetGeneralEventCountByIntervalResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetGeneralEventCountByIntervalResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[13]
+	mi := &file_proto_go_company_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -988,7 +1115,7 @@ func (x *RatingGetGeneralEventCountByIntervalResponseStruct) ProtoReflect() prot
 
 // Deprecated: Use RatingGetGeneralEventCountByIntervalResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetGeneralEventCountByIntervalResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{13}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *RatingGetGeneralEventCountByIntervalResponseStruct) GetEventCountList() []*EventCount {
@@ -1010,7 +1137,7 @@ type RatingForceSaveCacheRequestStruct struct {
 func (x *RatingForceSaveCacheRequestStruct) Reset() {
 	*x = RatingForceSaveCacheRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[14]
+		mi := &file_proto_go_company_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1023,7 +1150,7 @@ func (x *RatingForceSaveCacheRequestStruct) String() string {
 func (*RatingForceSaveCacheRequestStruct) ProtoMessage() {}
 
 func (x *RatingForceSaveCacheRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[14]
+	mi := &file_proto_go_company_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1036,7 +1163,7 @@ func (x *RatingForceSaveCacheRequestStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use RatingForceSaveCacheRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingForceSaveCacheRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{14}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *RatingForceSaveCacheRequestStruct) GetCompanyId() int64 {
@@ -1056,7 +1183,7 @@ type RatingForceSaveCacheResponseStruct struct {
 func (x *RatingForceSaveCacheResponseStruct) Reset() {
 	*x = RatingForceSaveCacheResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[15]
+		mi := &file_proto_go_company_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1069,7 +1196,7 @@ func (x *RatingForceSaveCacheResponseStruct) String() string {
 func (*RatingForceSaveCacheResponseStruct) ProtoMessage() {}
 
 func (x *RatingForceSaveCacheResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[15]
+	mi := &file_proto_go_company_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1082,7 +1209,7 @@ func (x *RatingForceSaveCacheResponseStruct) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use RatingForceSaveCacheResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingForceSaveCacheResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{15}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{17}
 }
 
 // формат запроса для rating.SetUserBlockInSystemStatus
@@ -1099,7 +1226,7 @@ type RatingSetUserBlockInSystemStatusRequestStruct struct {
 func (x *RatingSetUserBlockInSystemStatusRequestStruct) Reset() {
 	*x = RatingSetUserBlockInSystemStatusRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[16]
+		mi := &file_proto_go_company_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1112,7 +1239,7 @@ func (x *RatingSetUserBlockInSystemStatusRequestStruct) String() string {
 func (*RatingSetUserBlockInSystemStatusRequestStruct) ProtoMessage() {}
 
 func (x *RatingSetUserBlockInSystemStatusRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[16]
+	mi := &file_proto_go_company_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1125,7 +1252,7 @@ func (x *RatingSetUserBlockInSystemStatusRequestStruct) ProtoReflect() protorefl
 
 // Deprecated: Use RatingSetUserBlockInSystemStatusRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingSetUserBlockInSystemStatusRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{16}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *RatingSetUserBlockInSystemStatusRequestStruct) GetUserId() int64 {
@@ -1159,7 +1286,7 @@ type RatingSetUserBlockInSystemStatusResponseStruct struct {
 func (x *RatingSetUserBlockInSystemStatusResponseStruct) Reset() {
 	*x = RatingSetUserBlockInSystemStatusResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[17]
+		mi := &file_proto_go_company_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1172,7 +1299,7 @@ func (x *RatingSetUserBlockInSystemStatusResponseStruct) String() string {
 func (*RatingSetUserBlockInSystemStatusResponseStruct) ProtoMessage() {}
 
 func (x *RatingSetUserBlockInSystemStatusResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[17]
+	mi := &file_proto_go_company_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1185,7 +1312,7 @@ func (x *RatingSetUserBlockInSystemStatusResponseStruct) ProtoReflect() protoref
 
 // Deprecated: Use RatingSetUserBlockInSystemStatusResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingSetUserBlockInSystemStatusResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{17}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{19}
 }
 
 // формат запроса для rating.RatingGetUserStatus
@@ -1201,7 +1328,7 @@ type RatingGetUserStatusRequestStruct struct {
 func (x *RatingGetUserStatusRequestStruct) Reset() {
 	*x = RatingGetUserStatusRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[18]
+		mi := &file_proto_go_company_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1214,7 +1341,7 @@ func (x *RatingGetUserStatusRequestStruct) String() string {
 func (*RatingGetUserStatusRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetUserStatusRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[18]
+	mi := &file_proto_go_company_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1227,7 +1354,7 @@ func (x *RatingGetUserStatusRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetUserStatusRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetUserStatusRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{18}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *RatingGetUserStatusRequestStruct) GetUserId() int64 {
@@ -1256,7 +1383,7 @@ type RatingGetUserStatusResponseStruct struct {
 func (x *RatingGetUserStatusResponseStruct) Reset() {
 	*x = RatingGetUserStatusResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[19]
+		mi := &file_proto_go_company_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1269,7 +1396,7 @@ func (x *RatingGetUserStatusResponseStruct) String() string {
 func (*RatingGetUserStatusResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetUserStatusResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[19]
+	mi := &file_proto_go_company_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1282,7 +1409,7 @@ func (x *RatingGetUserStatusResponseStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use RatingGetUserStatusResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetUserStatusResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{19}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *RatingGetUserStatusResponseStruct) GetStatus() int32 {
@@ -1306,7 +1433,7 @@ type RatingGetListByDayRequestStruct struct {
 func (x *RatingGetListByDayRequestStruct) Reset() {
 	*x = RatingGetListByDayRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[20]
+		mi := &file_proto_go_company_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1319,7 +1446,7 @@ func (x *RatingGetListByDayRequestStruct) String() string {
 func (*RatingGetListByDayRequestStruct) ProtoMessage() {}
 
 func (x *RatingGetListByDayRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[20]
+	mi := &file_proto_go_company_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1332,7 +1459,7 @@ func (x *RatingGetListByDayRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetListByDayRequestStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetListByDayRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{20}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *RatingGetListByDayRequestStruct) GetYear() int64 {
@@ -1368,7 +1495,7 @@ type UserDayStats struct {
 func (x *UserDayStats) Reset() {
 	*x = UserDayStats{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[21]
+		mi := &file_proto_go_company_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1381,7 +1508,7 @@ func (x *UserDayStats) String() string {
 func (*UserDayStats) ProtoMessage() {}
 
 func (x *UserDayStats) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[21]
+	mi := &file_proto_go_company_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1394,7 +1521,7 @@ func (x *UserDayStats) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserDayStats.ProtoReflect.Descriptor instead.
 func (*UserDayStats) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{21}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *UserDayStats) GetUserId() int64 {
@@ -1423,7 +1550,7 @@ type RatingGetListByDayResponseStruct struct {
 func (x *RatingGetListByDayResponseStruct) Reset() {
 	*x = RatingGetListByDayResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[22]
+		mi := &file_proto_go_company_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1436,7 +1563,7 @@ func (x *RatingGetListByDayResponseStruct) String() string {
 func (*RatingGetListByDayResponseStruct) ProtoMessage() {}
 
 func (x *RatingGetListByDayResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[22]
+	mi := &file_proto_go_company_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1449,7 +1576,7 @@ func (x *RatingGetListByDayResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RatingGetListByDayResponseStruct.ProtoReflect.Descriptor instead.
 func (*RatingGetListByDayResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{22}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *RatingGetListByDayResponseStruct) GetUserDayStatsList() []*UserDayStats {
@@ -1472,7 +1599,7 @@ type EventVersionItem struct {
 func (x *EventVersionItem) Reset() {
 	*x = EventVersionItem{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[23]
+		mi := &file_proto_go_company_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1485,7 +1612,7 @@ func (x *EventVersionItem) String() string {
 func (*EventVersionItem) ProtoMessage() {}
 
 func (x *EventVersionItem) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[23]
+	mi := &file_proto_go_company_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1498,7 +1625,7 @@ func (x *EventVersionItem) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EventVersionItem.ProtoReflect.Descriptor instead.
 func (*EventVersionItem) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{23}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *EventVersionItem) GetVersion() int32 {
@@ -1540,7 +1667,7 @@ type ConversationReactionStruct struct {
 func (x *ConversationReactionStruct) Reset() {
 	*x = ConversationReactionStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[24]
+		mi := &file_proto_go_company_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1553,7 +1680,7 @@ func (x *ConversationReactionStruct) String() string {
 func (*ConversationReactionStruct) ProtoMessage() {}
 
 func (x *ConversationReactionStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[24]
+	mi := &file_proto_go_company_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1566,7 +1693,7 @@ func (x *ConversationReactionStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConversationReactionStruct.ProtoReflect.Descriptor instead.
 func (*ConversationReactionStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{24}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *ConversationReactionStruct) GetConversationMap() string {
@@ -1687,7 +1814,7 @@ type ReactionsAddInConversationRequestStruct struct {
 func (x *ReactionsAddInConversationRequestStruct) Reset() {
 	*x = ReactionsAddInConversationRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[25]
+		mi := &file_proto_go_company_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1700,7 +1827,7 @@ func (x *ReactionsAddInConversationRequestStruct) String() string {
 func (*ReactionsAddInConversationRequestStruct) ProtoMessage() {}
 
 func (x *ReactionsAddInConversationRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[25]
+	mi := &file_proto_go_company_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1713,7 +1840,7 @@ func (x *ReactionsAddInConversationRequestStruct) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use ReactionsAddInConversationRequestStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsAddInConversationRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{25}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *ReactionsAddInConversationRequestStruct) GetConversationReaction() *ConversationReactionStruct {
@@ -1740,7 +1867,7 @@ type ReactionsAddInConversationResponseStruct struct {
 func (x *ReactionsAddInConversationResponseStruct) Reset() {
 	*x = ReactionsAddInConversationResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[26]
+		mi := &file_proto_go_company_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1753,7 +1880,7 @@ func (x *ReactionsAddInConversationResponseStruct) String() string {
 func (*ReactionsAddInConversationResponseStruct) ProtoMessage() {}
 
 func (x *ReactionsAddInConversationResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[26]
+	mi := &file_proto_go_company_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1766,7 +1893,7 @@ func (x *ReactionsAddInConversationResponseStruct) ProtoReflect() protoreflect.M
 
 // Deprecated: Use ReactionsAddInConversationResponseStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsAddInConversationResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{26}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{28}
 }
 
 // формат запроса для reactions.RemoveInConversation
@@ -1782,7 +1909,7 @@ type ReactionsRemoveInConversationRequestStruct struct {
 func (x *ReactionsRemoveInConversationRequestStruct) Reset() {
 	*x = ReactionsRemoveInConversationRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[27]
+		mi := &file_proto_go_company_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1795,7 +1922,7 @@ func (x *ReactionsRemoveInConversationRequestStruct) String() string {
 func (*ReactionsRemoveInConversationRequestStruct) ProtoMessage() {}
 
 func (x *ReactionsRemoveInConversationRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[27]
+	mi := &file_proto_go_company_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1808,7 +1935,7 @@ func (x *ReactionsRemoveInConversationRequestStruct) ProtoReflect() protoreflect
 
 // Deprecated: Use ReactionsRemoveInConversationRequestStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsRemoveInConversationRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{27}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *ReactionsRemoveInConversationRequestStruct) GetConversationReaction() *ConversationReactionStruct {
@@ -1835,7 +1962,7 @@ type ReactionsRemoveInConversationResponseStruct struct {
 func (x *ReactionsRemoveInConversationResponseStruct) Reset() {
 	*x = ReactionsRemoveInConversationResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[28]
+		mi := &file_proto_go_company_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1848,7 +1975,7 @@ func (x *ReactionsRemoveInConversationResponseStruct) String() string {
 func (*ReactionsRemoveInConversationResponseStruct) ProtoMessage() {}
 
 func (x *ReactionsRemoveInConversationResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[28]
+	mi := &file_proto_go_company_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1861,7 +1988,7 @@ func (x *ReactionsRemoveInConversationResponseStruct) ProtoReflect() protoreflec
 
 // Deprecated: Use ReactionsRemoveInConversationResponseStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsRemoveInConversationResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{28}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{30}
 }
 
 type ThreadReactionStruct struct {
@@ -1889,7 +2016,7 @@ type ThreadReactionStruct struct {
 func (x *ThreadReactionStruct) Reset() {
 	*x = ThreadReactionStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[29]
+		mi := &file_proto_go_company_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1902,7 +2029,7 @@ func (x *ThreadReactionStruct) String() string {
 func (*ThreadReactionStruct) ProtoMessage() {}
 
 func (x *ThreadReactionStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[29]
+	mi := &file_proto_go_company_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1915,7 +2042,7 @@ func (x *ThreadReactionStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ThreadReactionStruct.ProtoReflect.Descriptor instead.
 func (*ThreadReactionStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{29}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *ThreadReactionStruct) GetThreadMap() string {
@@ -2036,7 +2163,7 @@ type ReactionsAddInThreadRequestStruct struct {
 func (x *ReactionsAddInThreadRequestStruct) Reset() {
 	*x = ReactionsAddInThreadRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[30]
+		mi := &file_proto_go_company_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2049,7 +2176,7 @@ func (x *ReactionsAddInThreadRequestStruct) String() string {
 func (*ReactionsAddInThreadRequestStruct) ProtoMessage() {}
 
 func (x *ReactionsAddInThreadRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[30]
+	mi := &file_proto_go_company_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2062,7 +2189,7 @@ func (x *ReactionsAddInThreadRequestStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use ReactionsAddInThreadRequestStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsAddInThreadRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{30}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *ReactionsAddInThreadRequestStruct) GetThreadReaction() *ThreadReactionStruct {
@@ -2089,7 +2216,7 @@ type ReactionsAddInThreadResponseStruct struct {
 func (x *ReactionsAddInThreadResponseStruct) Reset() {
 	*x = ReactionsAddInThreadResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[31]
+		mi := &file_proto_go_company_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2102,7 +2229,7 @@ func (x *ReactionsAddInThreadResponseStruct) String() string {
 func (*ReactionsAddInThreadResponseStruct) ProtoMessage() {}
 
 func (x *ReactionsAddInThreadResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[31]
+	mi := &file_proto_go_company_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2115,7 +2242,7 @@ func (x *ReactionsAddInThreadResponseStruct) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ReactionsAddInThreadResponseStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsAddInThreadResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{31}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{33}
 }
 
 // формат запроса для reactions.RemoveInThread
@@ -2131,7 +2258,7 @@ type ReactionsRemoveInThreadRequestStruct struct {
 func (x *ReactionsRemoveInThreadRequestStruct) Reset() {
 	*x = ReactionsRemoveInThreadRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[32]
+		mi := &file_proto_go_company_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2144,7 +2271,7 @@ func (x *ReactionsRemoveInThreadRequestStruct) String() string {
 func (*ReactionsRemoveInThreadRequestStruct) ProtoMessage() {}
 
 func (x *ReactionsRemoveInThreadRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[32]
+	mi := &file_proto_go_company_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2157,7 +2284,7 @@ func (x *ReactionsRemoveInThreadRequestStruct) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use ReactionsRemoveInThreadRequestStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsRemoveInThreadRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{32}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *ReactionsRemoveInThreadRequestStruct) GetThreadReaction() *ThreadReactionStruct {
@@ -2184,7 +2311,7 @@ type ReactionsRemoveInThreadResponseStruct struct {
 func (x *ReactionsRemoveInThreadResponseStruct) Reset() {
 	*x = ReactionsRemoveInThreadResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[33]
+		mi := &file_proto_go_company_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2197,7 +2324,7 @@ func (x *ReactionsRemoveInThreadResponseStruct) String() string {
 func (*ReactionsRemoveInThreadResponseStruct) ProtoMessage() {}
 
 func (x *ReactionsRemoveInThreadResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[33]
+	mi := &file_proto_go_company_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2210,7 +2337,206 @@ func (x *ReactionsRemoveInThreadResponseStruct) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use ReactionsRemoveInThreadResponseStruct.ProtoReflect.Descriptor instead.
 func (*ReactionsRemoveInThreadResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{33}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{35}
+}
+
+// формат запроса для ReadMessageAdd
+type ReadMessageAddRequestStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CompanyId               int64   `protobuf:"varint,1,opt,name=company_id,json=companyId,proto3" json:"company_id,omitempty"`
+	EntityType              string  `protobuf:"bytes,2,opt,name=entity_type,json=entityType,proto3" json:"entity_type,omitempty"`
+	EntityMap               string  `protobuf:"bytes,3,opt,name=entity_map,json=entityMap,proto3" json:"entity_map,omitempty"`
+	UserId                  int64   `protobuf:"varint,4,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	MessageMap              string  `protobuf:"bytes,5,opt,name=message_map,json=messageMap,proto3" json:"message_map,omitempty"`
+	EntityMessageIndex      int64   `protobuf:"varint,6,opt,name=entity_message_index,json=entityMessageIndex,proto3" json:"entity_message_index,omitempty"`
+	MessageCreatedAt        int64   `protobuf:"varint,7,opt,name=message_created_at,json=messageCreatedAt,proto3" json:"message_created_at,omitempty"`
+	ReadAt                  int64   `protobuf:"varint,8,opt,name=read_at,json=readAt,proto3" json:"read_at,omitempty"`
+	TableShard              int32   `protobuf:"varint,9,opt,name=table_shard,json=tableShard,proto3" json:"table_shard,omitempty"`
+	EntityMetaId            int64   `protobuf:"varint,10,opt,name=entity_meta_id,json=entityMetaId,proto3" json:"entity_meta_id,omitempty"`
+	EntityKey               string  `protobuf:"bytes,11,opt,name=entity_key,json=entityKey,proto3" json:"entity_key,omitempty"`
+	MessageKey              string  `protobuf:"bytes,12,opt,name=message_key,json=messageKey,proto3" json:"message_key,omitempty"`
+	DbShard                 int32   `protobuf:"varint,13,opt,name=db_shard,json=dbShard,proto3" json:"db_shard,omitempty"`
+	IsForceShowParticipant  bool    `protobuf:"varint,14,opt,name=is_force_show_participant,json=isForceShowParticipant,proto3" json:"is_force_show_participant,omitempty"`
+	HideReadParticipantList []int64 `protobuf:"varint,15,rep,packed,name=hide_read_participant_list,json=hideReadParticipantList,proto3" json:"hide_read_participant_list,omitempty"`
+}
+
+func (x *ReadMessageAddRequestStruct) Reset() {
+	*x = ReadMessageAddRequestStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_company_proto_msgTypes[36]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReadMessageAddRequestStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReadMessageAddRequestStruct) ProtoMessage() {}
+
+func (x *ReadMessageAddRequestStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_company_proto_msgTypes[36]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReadMessageAddRequestStruct.ProtoReflect.Descriptor instead.
+func (*ReadMessageAddRequestStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_company_proto_rawDescGZIP(), []int{36}
+}
+
+func (x *ReadMessageAddRequestStruct) GetCompanyId() int64 {
+	if x != nil {
+		return x.CompanyId
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetEntityType() string {
+	if x != nil {
+		return x.EntityType
+	}
+	return ""
+}
+
+func (x *ReadMessageAddRequestStruct) GetEntityMap() string {
+	if x != nil {
+		return x.EntityMap
+	}
+	return ""
+}
+
+func (x *ReadMessageAddRequestStruct) GetUserId() int64 {
+	if x != nil {
+		return x.UserId
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetMessageMap() string {
+	if x != nil {
+		return x.MessageMap
+	}
+	return ""
+}
+
+func (x *ReadMessageAddRequestStruct) GetEntityMessageIndex() int64 {
+	if x != nil {
+		return x.EntityMessageIndex
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetMessageCreatedAt() int64 {
+	if x != nil {
+		return x.MessageCreatedAt
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetReadAt() int64 {
+	if x != nil {
+		return x.ReadAt
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetTableShard() int32 {
+	if x != nil {
+		return x.TableShard
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetEntityMetaId() int64 {
+	if x != nil {
+		return x.EntityMetaId
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetEntityKey() string {
+	if x != nil {
+		return x.EntityKey
+	}
+	return ""
+}
+
+func (x *ReadMessageAddRequestStruct) GetMessageKey() string {
+	if x != nil {
+		return x.MessageKey
+	}
+	return ""
+}
+
+func (x *ReadMessageAddRequestStruct) GetDbShard() int32 {
+	if x != nil {
+		return x.DbShard
+	}
+	return 0
+}
+
+func (x *ReadMessageAddRequestStruct) GetIsForceShowParticipant() bool {
+	if x != nil {
+		return x.IsForceShowParticipant
+	}
+	return false
+}
+
+func (x *ReadMessageAddRequestStruct) GetHideReadParticipantList() []int64 {
+	if x != nil {
+		return x.HideReadParticipantList
+	}
+	return nil
+}
+
+// формат ответа для ReadMessageAdd
+type ReadMessageAddResponseStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ReadMessageAddResponseStruct) Reset() {
+	*x = ReadMessageAddResponseStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_company_proto_msgTypes[37]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReadMessageAddResponseStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReadMessageAddResponseStruct) ProtoMessage() {}
+
+func (x *ReadMessageAddResponseStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_company_proto_msgTypes[37]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReadMessageAddResponseStruct.ProtoReflect.Descriptor instead.
+func (*ReadMessageAddResponseStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_company_proto_rawDescGZIP(), []int{37}
 }
 
 // формат запроса для system.status
@@ -2223,7 +2549,7 @@ type SystemStatusRequestStruct struct {
 func (x *SystemStatusRequestStruct) Reset() {
 	*x = SystemStatusRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[34]
+		mi := &file_proto_go_company_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2236,7 +2562,7 @@ func (x *SystemStatusRequestStruct) String() string {
 func (*SystemStatusRequestStruct) ProtoMessage() {}
 
 func (x *SystemStatusRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[34]
+	mi := &file_proto_go_company_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2249,7 +2575,7 @@ func (x *SystemStatusRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemStatusRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemStatusRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{34}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{38}
 }
 
 // формат ответа для system.status
@@ -2269,7 +2595,7 @@ type SystemStatusResponseStruct struct {
 func (x *SystemStatusResponseStruct) Reset() {
 	*x = SystemStatusResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[35]
+		mi := &file_proto_go_company_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2282,7 +2608,7 @@ func (x *SystemStatusResponseStruct) String() string {
 func (*SystemStatusResponseStruct) ProtoMessage() {}
 
 func (x *SystemStatusResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[35]
+	mi := &file_proto_go_company_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2295,7 +2621,7 @@ func (x *SystemStatusResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemStatusResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemStatusResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{35}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *SystemStatusResponseStruct) GetName() string {
@@ -2350,7 +2676,7 @@ type SystemTraceGoroutineRequestStruct struct {
 func (x *SystemTraceGoroutineRequestStruct) Reset() {
 	*x = SystemTraceGoroutineRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[36]
+		mi := &file_proto_go_company_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2363,7 +2689,7 @@ func (x *SystemTraceGoroutineRequestStruct) String() string {
 func (*SystemTraceGoroutineRequestStruct) ProtoMessage() {}
 
 func (x *SystemTraceGoroutineRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[36]
+	mi := &file_proto_go_company_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2376,7 +2702,7 @@ func (x *SystemTraceGoroutineRequestStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use SystemTraceGoroutineRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemTraceGoroutineRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{36}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{40}
 }
 
 // формат ответа для system.traceGoroutine
@@ -2389,7 +2715,7 @@ type SystemTraceGoroutineResponseStruct struct {
 func (x *SystemTraceGoroutineResponseStruct) Reset() {
 	*x = SystemTraceGoroutineResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[37]
+		mi := &file_proto_go_company_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2402,7 +2728,7 @@ func (x *SystemTraceGoroutineResponseStruct) String() string {
 func (*SystemTraceGoroutineResponseStruct) ProtoMessage() {}
 
 func (x *SystemTraceGoroutineResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[37]
+	mi := &file_proto_go_company_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2415,7 +2741,7 @@ func (x *SystemTraceGoroutineResponseStruct) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use SystemTraceGoroutineResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemTraceGoroutineResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{37}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{41}
 }
 
 // формат запроса для system.traceMemory
@@ -2428,7 +2754,7 @@ type SystemTraceMemoryRequestStruct struct {
 func (x *SystemTraceMemoryRequestStruct) Reset() {
 	*x = SystemTraceMemoryRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[38]
+		mi := &file_proto_go_company_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2441,7 +2767,7 @@ func (x *SystemTraceMemoryRequestStruct) String() string {
 func (*SystemTraceMemoryRequestStruct) ProtoMessage() {}
 
 func (x *SystemTraceMemoryRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[38]
+	mi := &file_proto_go_company_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2454,7 +2780,7 @@ func (x *SystemTraceMemoryRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemTraceMemoryRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemTraceMemoryRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{38}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{42}
 }
 
 // формат ответа для system.traceMemory
@@ -2467,7 +2793,7 @@ type SystemTraceMemoryResponseStruct struct {
 func (x *SystemTraceMemoryResponseStruct) Reset() {
 	*x = SystemTraceMemoryResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[39]
+		mi := &file_proto_go_company_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2480,7 +2806,7 @@ func (x *SystemTraceMemoryResponseStruct) String() string {
 func (*SystemTraceMemoryResponseStruct) ProtoMessage() {}
 
 func (x *SystemTraceMemoryResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[39]
+	mi := &file_proto_go_company_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2493,7 +2819,7 @@ func (x *SystemTraceMemoryResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemTraceMemoryResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemTraceMemoryResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{39}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{43}
 }
 
 // формат запроса для system.cpuProfile
@@ -2508,7 +2834,7 @@ type SystemCpuProfileRequestStruct struct {
 func (x *SystemCpuProfileRequestStruct) Reset() {
 	*x = SystemCpuProfileRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[40]
+		mi := &file_proto_go_company_proto_msgTypes[44]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2521,7 +2847,7 @@ func (x *SystemCpuProfileRequestStruct) String() string {
 func (*SystemCpuProfileRequestStruct) ProtoMessage() {}
 
 func (x *SystemCpuProfileRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[40]
+	mi := &file_proto_go_company_proto_msgTypes[44]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2534,7 +2860,7 @@ func (x *SystemCpuProfileRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemCpuProfileRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemCpuProfileRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{40}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *SystemCpuProfileRequestStruct) GetTime() int64 {
@@ -2554,7 +2880,7 @@ type SystemCpuProfileResponseStruct struct {
 func (x *SystemCpuProfileResponseStruct) Reset() {
 	*x = SystemCpuProfileResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[41]
+		mi := &file_proto_go_company_proto_msgTypes[45]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2567,7 +2893,7 @@ func (x *SystemCpuProfileResponseStruct) String() string {
 func (*SystemCpuProfileResponseStruct) ProtoMessage() {}
 
 func (x *SystemCpuProfileResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[41]
+	mi := &file_proto_go_company_proto_msgTypes[45]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2580,7 +2906,7 @@ func (x *SystemCpuProfileResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemCpuProfileResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemCpuProfileResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{41}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{45}
 }
 
 // формат запроса для system.reloadConfig
@@ -2593,7 +2919,7 @@ type SystemReloadConfigRequestStruct struct {
 func (x *SystemReloadConfigRequestStruct) Reset() {
 	*x = SystemReloadConfigRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[42]
+		mi := &file_proto_go_company_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2606,7 +2932,7 @@ func (x *SystemReloadConfigRequestStruct) String() string {
 func (*SystemReloadConfigRequestStruct) ProtoMessage() {}
 
 func (x *SystemReloadConfigRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[42]
+	mi := &file_proto_go_company_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2619,7 +2945,7 @@ func (x *SystemReloadConfigRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemReloadConfigRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemReloadConfigRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{42}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{46}
 }
 
 // формат ответа для system.reloadConfig
@@ -2639,7 +2965,7 @@ type SystemReloadConfigResponseStruct struct {
 func (x *SystemReloadConfigResponseStruct) Reset() {
 	*x = SystemReloadConfigResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[43]
+		mi := &file_proto_go_company_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2652,7 +2978,7 @@ func (x *SystemReloadConfigResponseStruct) String() string {
 func (*SystemReloadConfigResponseStruct) ProtoMessage() {}
 
 func (x *SystemReloadConfigResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[43]
+	mi := &file_proto_go_company_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2665,7 +2991,7 @@ func (x *SystemReloadConfigResponseStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemReloadConfigResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemReloadConfigResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{43}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *SystemReloadConfigResponseStruct) GetLoggingLevel() int32 {
@@ -2720,7 +3046,7 @@ type SystemReloadShardingRequestStruct struct {
 func (x *SystemReloadShardingRequestStruct) Reset() {
 	*x = SystemReloadShardingRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[44]
+		mi := &file_proto_go_company_proto_msgTypes[48]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2733,7 +3059,7 @@ func (x *SystemReloadShardingRequestStruct) String() string {
 func (*SystemReloadShardingRequestStruct) ProtoMessage() {}
 
 func (x *SystemReloadShardingRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[44]
+	mi := &file_proto_go_company_proto_msgTypes[48]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2746,7 +3072,7 @@ func (x *SystemReloadShardingRequestStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use SystemReloadShardingRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemReloadShardingRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{44}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{48}
 }
 
 // формат ответа для system.reloadSharding
@@ -2759,7 +3085,7 @@ type SystemReloadShardingResponseStruct struct {
 func (x *SystemReloadShardingResponseStruct) Reset() {
 	*x = SystemReloadShardingResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[45]
+		mi := &file_proto_go_company_proto_msgTypes[49]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2772,7 +3098,7 @@ func (x *SystemReloadShardingResponseStruct) String() string {
 func (*SystemReloadShardingResponseStruct) ProtoMessage() {}
 
 func (x *SystemReloadShardingResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[45]
+	mi := &file_proto_go_company_proto_msgTypes[49]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2785,7 +3111,7 @@ func (x *SystemReloadShardingResponseStruct) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use SystemReloadShardingResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemReloadShardingResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{45}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{49}
 }
 
 // формат запроса для system.checkSharding
@@ -2800,7 +3126,7 @@ type SystemCheckShardingRequestStruct struct {
 func (x *SystemCheckShardingRequestStruct) Reset() {
 	*x = SystemCheckShardingRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[46]
+		mi := &file_proto_go_company_proto_msgTypes[50]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2813,7 +3139,7 @@ func (x *SystemCheckShardingRequestStruct) String() string {
 func (*SystemCheckShardingRequestStruct) ProtoMessage() {}
 
 func (x *SystemCheckShardingRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[46]
+	mi := &file_proto_go_company_proto_msgTypes[50]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2826,7 +3152,7 @@ func (x *SystemCheckShardingRequestStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SystemCheckShardingRequestStruct.ProtoReflect.Descriptor instead.
 func (*SystemCheckShardingRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{46}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{50}
 }
 
 func (x *SystemCheckShardingRequestStruct) GetCompanyId() int64 {
@@ -2846,7 +3172,7 @@ type SystemCheckShardingResponseStruct struct {
 func (x *SystemCheckShardingResponseStruct) Reset() {
 	*x = SystemCheckShardingResponseStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_company_proto_msgTypes[47]
+		mi := &file_proto_go_company_proto_msgTypes[51]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2859,7 +3185,7 @@ func (x *SystemCheckShardingResponseStruct) String() string {
 func (*SystemCheckShardingResponseStruct) ProtoMessage() {}
 
 func (x *SystemCheckShardingResponseStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_company_proto_msgTypes[47]
+	mi := &file_proto_go_company_proto_msgTypes[51]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2872,7 +3198,7 @@ func (x *SystemCheckShardingResponseStruct) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use SystemCheckShardingResponseStruct.ProtoReflect.Descriptor instead.
 func (*SystemCheckShardingResponseStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_company_proto_rawDescGZIP(), []int{47}
+	return file_proto_go_company_proto_rawDescGZIP(), []int{51}
 }
 
 var File_proto_go_company_proto protoreflect.FileDescriptor
@@ -2880,7 +3206,22 @@ var File_proto_go_company_proto protoreflect.FileDescriptor
 var file_proto_go_company_proto_rawDesc = []byte{
 	0x0a, 0x16, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x5f, 0x63, 0x6f, 0x6d, 0x70, 0x61,
 	0x6e, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
-	0x79, 0x47, 0x72, 0x70, 0x63, 0x22, 0x78, 0x0a, 0x16, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49,
+	0x79, 0x47, 0x72, 0x70, 0x63, 0x22, 0xb8, 0x01, 0x0a, 0x30, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
+	0x49, 0x6e, 0x63, 0x44, 0x61, 0x79, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e,
+	0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x46, 0x6f, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
+	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65,
+	0x72, 0x49, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x79, 0x65, 0x61, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x04, 0x79, 0x65, 0x61, 0x72, 0x12, 0x10, 0x0a, 0x03, 0x64, 0x61, 0x79, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x64, 0x61, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x76, 0x65,
+	0x6e, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x12,
+	0x10, 0x0a, 0x03, 0x69, 0x6e, 0x63, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x69, 0x6e,
+	0x63, 0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x5f, 0x69, 0x64, 0x18,
+	0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49, 0x64,
+	0x22, 0x33, 0x0a, 0x31, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x63, 0x44, 0x61, 0x79,
+	0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74,
+	0x46, 0x6f, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53,
+	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x78, 0x0a, 0x16, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49,
 	0x6e, 0x63, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12,
 	0x14, 0x0a, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
 	0x65, 0x76, 0x65, 0x6e, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64,
@@ -3209,221 +3550,277 @@ var file_proto_go_company_proto_rawDesc = []byte{
 	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49, 0x64, 0x22, 0x27, 0x0a, 0x25, 0x52, 0x65, 0x61, 0x63, 0x74,
 	0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65,
 	0x61, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-	0x22, 0x1b, 0x0a, 0x19, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0xba, 0x01,
-	0x0a, 0x1a, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x12, 0x0a, 0x04,
-	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
-	0x12, 0x1e, 0x0a, 0x0a, 0x67, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x73, 0x18, 0x02,
-	0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x67, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x73,
-	0x12, 0x16, 0x0a, 0x06, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03,
-	0x52, 0x06, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x12, 0x1b, 0x0a, 0x09, 0x6d, 0x65, 0x6d, 0x6f,
-	0x72, 0x79, 0x5f, 0x6b, 0x62, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6d, 0x65, 0x6d,
-	0x6f, 0x72, 0x79, 0x4b, 0x62, 0x12, 0x1b, 0x0a, 0x09, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x5f,
-	0x6d, 0x62, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79,
-	0x4d, 0x62, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x70, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x06, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x06, 0x75, 0x70, 0x74, 0x69, 0x6d, 0x65, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79,
-	0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69,
-	0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22,
-	0x24, 0x0a, 0x22, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f,
-	0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53,
-	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x20, 0x0a, 0x1e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54,
-	0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x21, 0x0a, 0x1f, 0x53, 0x79, 0x73, 0x74, 0x65,
-	0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x33, 0x0a, 0x1d, 0x53, 0x79,
-	0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x74,
-	0x69, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x74, 0x69, 0x6d, 0x65, 0x22,
-	0x20, 0x0a, 0x1e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66,
-	0x69, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63,
-	0x74, 0x22, 0x21, 0x0a, 0x1f, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61,
-	0x64, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
-	0x72, 0x75, 0x63, 0x74, 0x22, 0xf0, 0x01, 0x0a, 0x20, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52,
-	0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x23, 0x0a, 0x0d, 0x6c, 0x6f, 0x67,
-	0x67, 0x69, 0x6e, 0x67, 0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05,
-	0x52, 0x0c, 0x6c, 0x6f, 0x67, 0x67, 0x69, 0x6e, 0x67, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x12, 0x1f,
-	0x0a, 0x0b, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x0a, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x12,
-	0x1f, 0x0a, 0x0b, 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x5f, 0x64, 0x70, 0x63, 0x18, 0x03,
-	0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x44, 0x70, 0x63,
-	0x12, 0x19, 0x0a, 0x08, 0x74, 0x63, 0x70, 0x5f, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x04, 0x20, 0x01,
-	0x28, 0x03, 0x52, 0x07, 0x74, 0x63, 0x70, 0x50, 0x6f, 0x72, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x72,
-	0x61, 0x62, 0x62, 0x69, 0x74, 0x5f, 0x71, 0x75, 0x65, 0x75, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x0b, 0x72, 0x61, 0x62, 0x62, 0x69, 0x74, 0x51, 0x75, 0x65, 0x75, 0x65, 0x12, 0x27,
-	0x0a, 0x0f, 0x72, 0x61, 0x62, 0x62, 0x69, 0x74, 0x5f, 0x65, 0x78, 0x63, 0x68, 0x61, 0x6e, 0x67,
-	0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x72, 0x61, 0x62, 0x62, 0x69, 0x74, 0x45,
-	0x78, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79, 0x73, 0x74, 0x65,
-	0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x24, 0x0a, 0x22,
-	0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72,
-	0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75,
-	0x63, 0x74, 0x22, 0x41, 0x0a, 0x20, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63,
-	0x6b, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
-	0x79, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70,
-	0x61, 0x6e, 0x79, 0x49, 0x64, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43,
-	0x68, 0x65, 0x63, 0x6b, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x32, 0xca, 0x13, 0x0a, 0x07, 0x63,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x12, 0x58, 0x0a, 0x09, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
-	0x49, 0x6e, 0x63, 0x12, 0x23, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
-	0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x63, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x24, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
+	0x22, 0xc9, 0x04, 0x0a, 0x1b, 0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x5f, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49, 0x64, 0x12,
+	0x1f, 0x0a, 0x0b, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x54, 0x79, 0x70, 0x65,
+	0x12, 0x1d, 0x0a, 0x0a, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x5f, 0x6d, 0x61, 0x70, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x4d, 0x61, 0x70, 0x12,
+	0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x6d, 0x65, 0x73, 0x73,
+	0x61, 0x67, 0x65, 0x5f, 0x6d, 0x61, 0x70, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x6d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x4d, 0x61, 0x70, 0x12, 0x30, 0x0a, 0x14, 0x65, 0x6e, 0x74,
+	0x69, 0x74, 0x79, 0x5f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x5f, 0x69, 0x6e, 0x64, 0x65,
+	0x78, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x12, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x4d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x49, 0x6e, 0x64, 0x65, 0x78, 0x12, 0x2c, 0x0a, 0x12, 0x6d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x5f, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x5f, 0x61,
+	0x74, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52, 0x10, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x41, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x72, 0x65, 0x61,
+	0x64, 0x5f, 0x61, 0x74, 0x18, 0x08, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x61, 0x64,
+	0x41, 0x74, 0x12, 0x1f, 0x0a, 0x0b, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x5f, 0x73, 0x68, 0x61, 0x72,
+	0x64, 0x18, 0x09, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0a, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x68,
+	0x61, 0x72, 0x64, 0x12, 0x24, 0x0a, 0x0e, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x5f, 0x6d, 0x65,
+	0x74, 0x61, 0x5f, 0x69, 0x64, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x65, 0x6e, 0x74,
+	0x69, 0x74, 0x79, 0x4d, 0x65, 0x74, 0x61, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x65, 0x6e, 0x74,
+	0x69, 0x74, 0x79, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x65,
+	0x6e, 0x74, 0x69, 0x74, 0x79, 0x4b, 0x65, 0x79, 0x12, 0x1f, 0x0a, 0x0b, 0x6d, 0x65, 0x73, 0x73,
+	0x61, 0x67, 0x65, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x6d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x4b, 0x65, 0x79, 0x12, 0x19, 0x0a, 0x08, 0x64, 0x62, 0x5f,
+	0x73, 0x68, 0x61, 0x72, 0x64, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x64, 0x62, 0x53,
+	0x68, 0x61, 0x72, 0x64, 0x12, 0x39, 0x0a, 0x19, 0x69, 0x73, 0x5f, 0x66, 0x6f, 0x72, 0x63, 0x65,
+	0x5f, 0x73, 0x68, 0x6f, 0x77, 0x5f, 0x70, 0x61, 0x72, 0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e,
+	0x74, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x08, 0x52, 0x16, 0x69, 0x73, 0x46, 0x6f, 0x72, 0x63, 0x65,
+	0x53, 0x68, 0x6f, 0x77, 0x50, 0x61, 0x72, 0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x12,
+	0x3b, 0x0a, 0x1a, 0x68, 0x69, 0x64, 0x65, 0x5f, 0x72, 0x65, 0x61, 0x64, 0x5f, 0x70, 0x61, 0x72,
+	0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x5f, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x0f, 0x20,
+	0x03, 0x28, 0x03, 0x52, 0x17, 0x68, 0x69, 0x64, 0x65, 0x52, 0x65, 0x61, 0x64, 0x50, 0x61, 0x72,
+	0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x22, 0x1e, 0x0a, 0x1c,
+	0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x41, 0x64, 0x64, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x1b, 0x0a, 0x19,
+	0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0xba, 0x01, 0x0a, 0x1a, 0x53, 0x79,
+	0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1e, 0x0a, 0x0a,
+	0x67, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0a, 0x67, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x73, 0x12, 0x16, 0x0a, 0x06,
+	0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6d, 0x65,
+	0x6d, 0x6f, 0x72, 0x79, 0x12, 0x1b, 0x0a, 0x09, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x5f, 0x6b,
+	0x62, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x4b,
+	0x62, 0x12, 0x1b, 0x0a, 0x09, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x5f, 0x6d, 0x62, 0x18, 0x05,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x4d, 0x62, 0x12, 0x16,
+	0x0a, 0x06, 0x75, 0x70, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06,
+	0x75, 0x70, 0x74, 0x69, 0x6d, 0x65, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d,
+	0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x24, 0x0a, 0x22, 0x53,
+	0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74,
+	0x69, 0x6e, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63,
+	0x74, 0x22, 0x20, 0x0a, 0x1e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65,
+	0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x21, 0x0a, 0x1f, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61,
+	0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x33, 0x0a, 0x1d, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d,
+	0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x74, 0x69, 0x6d, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x74, 0x69, 0x6d, 0x65, 0x22, 0x20, 0x0a, 0x1e, 0x53,
+	0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x21, 0x0a,
+	0x1f, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x22, 0xf0, 0x01, 0x0a, 0x20, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61,
+	0x64, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53,
+	0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x23, 0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x67, 0x69, 0x6e, 0x67,
+	0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x6c, 0x6f,
+	0x67, 0x67, 0x69, 0x6e, 0x67, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x12, 0x1f, 0x0a, 0x0b, 0x73, 0x65,
+	0x72, 0x76, 0x65, 0x72, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x0a, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x63,
+	0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x5f, 0x64, 0x70, 0x63, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0a, 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x44, 0x70, 0x63, 0x12, 0x19, 0x0a, 0x08,
+	0x74, 0x63, 0x70, 0x5f, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07,
+	0x74, 0x63, 0x70, 0x50, 0x6f, 0x72, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x72, 0x61, 0x62, 0x62, 0x69,
+	0x74, 0x5f, 0x71, 0x75, 0x65, 0x75, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x72,
+	0x61, 0x62, 0x62, 0x69, 0x74, 0x51, 0x75, 0x65, 0x75, 0x65, 0x12, 0x27, 0x0a, 0x0f, 0x72, 0x61,
+	0x62, 0x62, 0x69, 0x74, 0x5f, 0x65, 0x78, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x18, 0x06, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0e, 0x72, 0x61, 0x62, 0x62, 0x69, 0x74, 0x45, 0x78, 0x63, 0x68, 0x61,
+	0x6e, 0x67, 0x65, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c,
+	0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x24, 0x0a, 0x22, 0x53, 0x79, 0x73, 0x74,
+	0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x41,
+	0x0a, 0x20, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53, 0x68, 0x61,
+	0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75,
+	0x63, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x5f, 0x69, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x49,
+	0x64, 0x22, 0x23, 0x0a, 0x21, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b,
+	0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x32, 0xdc, 0x15, 0x0a, 0x07, 0x63, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x79, 0x12, 0xa6, 0x01, 0x0a, 0x23, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x63,
+	0x44, 0x61, 0x79, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f,
+	0x75, 0x6e, 0x74, 0x46, 0x6f, 0x72, 0x55, 0x73, 0x65, 0x72, 0x12, 0x3d, 0x2e, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49,
+	0x6e, 0x63, 0x44, 0x61, 0x79, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74,
+	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x46, 0x6f, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x3e, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e,
+	0x63, 0x44, 0x61, 0x79, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43,
+	0x6f, 0x75, 0x6e, 0x74, 0x46, 0x6f, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x58, 0x0a, 0x09, 0x52,
+	0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x63, 0x12, 0x23, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
 	0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x63,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
-	0x12, 0x58, 0x0a, 0x09, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x12, 0x23, 0x2e,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x24, 0x2e,
 	0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69,
-	0x6e, 0x67, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75,
-	0x63, 0x74, 0x1a, 0x24, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63,
-	0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x74, 0x0a, 0x11, 0x52, 0x61,
-	0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12,
-	0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61,
-	0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x49, 0x64, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x30, 0x2e, 0x63,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e,
-	0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x49, 0x64, 0x4c, 0x69, 0x73, 0x74,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
-	0x12, 0x94, 0x01, 0x0a, 0x1d, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x45, 0x76,
-	0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x76,
-	0x61, 0x6c, 0x12, 0x37, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63,
-	0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43,
-	0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x38, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
+	0x6e, 0x67, 0x49, 0x6e, 0x63, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x58, 0x0a, 0x09, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47,
+	0x65, 0x74, 0x12, 0x23, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63,
+	0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x24, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12,
+	0x74, 0x0a, 0x11, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73,
+	0x65, 0x72, 0x49, 0x64, 0x12, 0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
+	0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73,
+	0x65, 0x72, 0x49, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63,
+	0x74, 0x1a, 0x30, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e,
+	0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x49,
+	0x64, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x94, 0x01, 0x0a, 0x1d, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
 	0x47, 0x65, 0x74, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49,
-	0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53,
-	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0xa9, 0x01, 0x0a, 0x24, 0x52, 0x61, 0x74, 0x69,
-	0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x6c, 0x45, 0x76, 0x65, 0x6e,
-	0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c,
-	0x12, 0x3e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
-	0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x6c, 0x45,
+	0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x12, 0x37, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x45,
 	0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72,
 	0x76, 0x61, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-	0x1a, 0x3f, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
-	0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x6c, 0x45,
-	0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72,
-	0x76, 0x61, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63,
-	0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x46, 0x6f, 0x72,
-	0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61, 0x63, 0x68, 0x65, 0x12, 0x2e, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
-	0x46, 0x6f, 0x72, 0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61, 0x63, 0x68, 0x65, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
-	0x46, 0x6f, 0x72, 0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61, 0x63, 0x68, 0x65, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x9d,
-	0x01, 0x0a, 0x20, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x53, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72,
+	0x1a, 0x38, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
+	0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75,
+	0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0xa9, 0x01, 0x0a,
+	0x24, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61,
+	0x6c, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79, 0x49, 0x6e, 0x74,
+	0x65, 0x72, 0x76, 0x61, 0x6c, 0x12, 0x3e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
+	0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e,
+	0x65, 0x72, 0x61, 0x6c, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79,
+	0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53,
+	0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x3f, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
+	0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x47, 0x65, 0x6e,
+	0x65, 0x72, 0x61, 0x6c, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x42, 0x79,
+	0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x52, 0x61, 0x74, 0x69,
+	0x6e, 0x67, 0x46, 0x6f, 0x72, 0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61, 0x63, 0x68, 0x65,
+	0x12, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
+	0x61, 0x74, 0x69, 0x6e, 0x67, 0x46, 0x6f, 0x72, 0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61,
+	0x63, 0x68, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x1a, 0x2f, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
+	0x61, 0x74, 0x69, 0x6e, 0x67, 0x46, 0x6f, 0x72, 0x63, 0x65, 0x53, 0x61, 0x76, 0x65, 0x43, 0x61,
+	0x63, 0x68, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63,
+	0x74, 0x22, 0x00, 0x12, 0x9d, 0x01, 0x0a, 0x20, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x53, 0x65,
+	0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x6e, 0x53, 0x79, 0x73, 0x74,
+	0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x3a, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x53, 0x65, 0x74,
+	0x55, 0x73, 0x65, 0x72, 0x42, 0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x6e, 0x53, 0x79, 0x73, 0x74, 0x65,
+	0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
+	0x72, 0x75, 0x63, 0x74, 0x1a, 0x3b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
+	0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x53, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72,
 	0x42, 0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x6e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61,
-	0x74, 0x75, 0x73, 0x12, 0x3a, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
-	0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x53, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42,
-	0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x6e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74,
-	0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a,
-	0x3b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61,
-	0x74, 0x69, 0x6e, 0x67, 0x53, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x42, 0x6c, 0x6f, 0x63, 0x6b,
-	0x49, 0x6e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x76,
-	0x0a, 0x13, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x53,
-	0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
-	0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65,
-	0x72, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
-	0x72, 0x75, 0x63, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
-	0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72,
-	0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74,
-	0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x73, 0x0a, 0x12, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67,
-	0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44, 0x61, 0x79, 0x12, 0x2c, 0x2e, 0x63,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e,
-	0x67, 0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44, 0x61, 0x79, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2d, 0x2e, 0x63, 0x6f, 0x6d,
-	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47,
-	0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44, 0x61, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x8b, 0x01, 0x0a, 0x1a,
-	0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x43, 0x6f,
-	0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x34, 0x2e, 0x63, 0x6f, 0x6d,
-	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-	0x1a, 0x35, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
-	0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x43, 0x6f, 0x6e,
-	0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x94, 0x01, 0x0a, 0x1d, 0x52, 0x65,
-	0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x43,
-	0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x37, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69,
-	0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65,
-	0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
-	0x72, 0x75, 0x63, 0x74, 0x1a, 0x38, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
-	0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f,
-	0x76, 0x65, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
-	0x12, 0x79, 0x0a, 0x14, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64,
-	0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x12, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
-	0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
-	0x41, 0x64, 0x64, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
-	0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
-	0x41, 0x64, 0x64, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x82, 0x01, 0x0a, 0x17,
-	0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49,
-	0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x12, 0x31, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
-	0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52,
-	0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x32, 0x2e, 0x63, 0x6f, 0x6d,
-	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
-	0x12, 0x61, 0x0a, 0x0c, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73,
-	0x12, 0x26, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53,
-	0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x27, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61,
-	0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61,
 	0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63,
-	0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61,
-	0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x12, 0x2e, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d,
-	0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63, 0x6f,
-	0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d,
-	0x54, 0x72, 0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x70,
-	0x0a, 0x11, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d,
-	0x6f, 0x72, 0x79, 0x12, 0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
-	0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d,
-	0x6f, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-	0x1a, 0x2c, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53,
-	0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79,
+	0x74, 0x22, 0x00, 0x12, 0x76, 0x0a, 0x13, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74,
+	0x55, 0x73, 0x65, 0x72, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47,
+	0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65,
+	0x74, 0x55, 0x73, 0x65, 0x72, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x73, 0x0a, 0x12, 0x52,
+	0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44, 0x61,
+	0x79, 0x12, 0x2c, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e,
+	0x52, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44,
+	0x61, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a,
+	0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x61,
+	0x74, 0x69, 0x6e, 0x67, 0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x79, 0x44, 0x61, 0x79,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
-	0x12, 0x6d, 0x0a, 0x10, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f,
-	0x66, 0x69, 0x6c, 0x65, 0x12, 0x2a, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
-	0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66,
-	0x69, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-	0x1a, 0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53,
-	0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12,
-	0x73, 0x0a, 0x12, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43,
-	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x2c, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
-	0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64,
-	0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72,
-	0x75, 0x63, 0x74, 0x1a, 0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
+	0x12, 0x8b, 0x01, 0x0a, 0x1a, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64,
+	0x64, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
+	0x34, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65,
+	0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76,
+	0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53,
+	0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x35, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
+	0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64,
+	0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x94,
+	0x01, 0x0a, 0x1d, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f,
+	0x76, 0x65, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x12, 0x37, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52,
+	0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e,
+	0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x38, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x43, 0x6f, 0x6e, 0x76, 0x65, 0x72, 0x73,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x12, 0x2e, 0x2e,
+	0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e,
+	0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00,
+	0x12, 0x82, 0x01, 0x0a, 0x17, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65,
+	0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x12, 0x31, 0x2e, 0x63,
+	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54, 0x68, 0x72, 0x65,
+	0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a,
+	0x32, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65,
+	0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x49, 0x6e, 0x54,
+	0x68, 0x72, 0x65, 0x61, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x67, 0x0a, 0x0e, 0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x73,
+	0x73, 0x61, 0x67, 0x65, 0x41, 0x64, 0x64, 0x12, 0x28, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67,
+	0x65, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63,
+	0x74, 0x1a, 0x29, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e,
+	0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x41, 0x64, 0x64, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x61,
+	0x0a, 0x0c, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x26,
+	0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73,
+	0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x27, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79,
+	0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x53, 0x74, 0x61, 0x74, 0x75,
+	0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22,
+	0x00, 0x12, 0x79, 0x0a, 0x14, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65,
+	0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x12, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72,
+	0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72,
+	0x61, 0x63, 0x65, 0x47, 0x6f, 0x72, 0x6f, 0x75, 0x74, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x70, 0x0a, 0x11,
+	0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72,
+	0x79, 0x12, 0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e,
+	0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72,
+	0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2c,
+	0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73,
+	0x74, 0x65, 0x6d, 0x54, 0x72, 0x61, 0x63, 0x65, 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x6d,
+	0x0a, 0x10, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69,
+	0x6c, 0x65, 0x12, 0x2a, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63,
+	0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c,
+	0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2b,
+	0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73,
+	0x74, 0x65, 0x6d, 0x43, 0x70, 0x75, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x73, 0x0a,
+	0x12, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x12, 0x2c, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
 	0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43, 0x6f,
-	0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75,
-	0x63, 0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65,
-	0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x12, 0x2e, 0x2e, 0x63,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65,
-	0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65,
-	0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12,
-	0x76, 0x0a, 0x13, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53, 0x68,
-	0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79,
-	0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b,
-	0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53,
-	0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47,
-	0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53,
-	0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53,
-	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x42, 0x0a, 0x5a, 0x08, 0x2f, 0x63, 0x6f, 0x6d, 0x70,
-	0x61, 0x6e, 0x79, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63,
+	0x74, 0x1a, 0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e,
+	0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f, 0x61, 0x64, 0x43, 0x6f, 0x6e, 0x66,
+	0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x22, 0x00, 0x12, 0x79, 0x0a, 0x14, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x6c, 0x6f,
+	0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x12, 0x2e, 0x2e, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52,
+	0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x1a, 0x2f, 0x2e, 0x63, 0x6f, 0x6d,
+	0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x52,
+	0x65, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x68, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x76, 0x0a,
+	0x13, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53, 0x68, 0x61, 0x72,
+	0x64, 0x69, 0x6e, 0x67, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72,
+	0x70, 0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53, 0x68,
+	0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x47, 0x72, 0x70,
+	0x63, 0x2e, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x53, 0x68, 0x61,
+	0x72, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72,
+	0x75, 0x63, 0x74, 0x22, 0x00, 0x42, 0x0a, 0x5a, 0x08, 0x2f, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3438,117 +3835,125 @@ func file_proto_go_company_proto_rawDescGZIP() []byte {
 	return file_proto_go_company_proto_rawDescData
 }
 
-var file_proto_go_company_proto_msgTypes = make([]protoimpl.MessageInfo, 51)
+var file_proto_go_company_proto_msgTypes = make([]protoimpl.MessageInfo, 55)
 var file_proto_go_company_proto_goTypes = []interface{}{
-	(*RatingIncRequestStruct)(nil),                             // 0: companyGrpc.RatingIncRequestStruct
-	(*RatingIncResponseStruct)(nil),                            // 1: companyGrpc.RatingIncResponseStruct
-	(*RatingGetRequestStruct)(nil),                             // 2: companyGrpc.RatingGetRequestStruct
-	(*TopItem)(nil),                                            // 3: companyGrpc.TopItem
-	(*RatingGetResponseStruct)(nil),                            // 4: companyGrpc.RatingGetResponseStruct
-	(*UserRating)(nil),                                         // 5: companyGrpc.UserRating
-	(*RatingGetByUserIdRequestStruct)(nil),                     // 6: companyGrpc.RatingGetByUserIdRequestStruct
-	(*RatingGetByUserIdResponseStruct)(nil),                    // 7: companyGrpc.RatingGetByUserIdResponseStruct
-	(*RatingGetByUserIdListResponseStruct)(nil),                // 8: companyGrpc.RatingGetByUserIdListResponseStruct
-	(*RatingGetEventCountByIntervalRequestStruct)(nil),         // 9: companyGrpc.RatingGetEventCountByIntervalRequestStruct
-	(*EventCount)(nil),                                         // 10: companyGrpc.EventCount
-	(*RatingGetEventCountByIntervalResponseStruct)(nil),        // 11: companyGrpc.RatingGetEventCountByIntervalResponseStruct
-	(*RatingGetGeneralEventCountByIntervalRequestStruct)(nil),  // 12: companyGrpc.RatingGetGeneralEventCountByIntervalRequestStruct
-	(*RatingGetGeneralEventCountByIntervalResponseStruct)(nil), // 13: companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct
-	(*RatingForceSaveCacheRequestStruct)(nil),                  // 14: companyGrpc.RatingForceSaveCacheRequestStruct
-	(*RatingForceSaveCacheResponseStruct)(nil),                 // 15: companyGrpc.RatingForceSaveCacheResponseStruct
-	(*RatingSetUserBlockInSystemStatusRequestStruct)(nil),      // 16: companyGrpc.RatingSetUserBlockInSystemStatusRequestStruct
-	(*RatingSetUserBlockInSystemStatusResponseStruct)(nil),     // 17: companyGrpc.RatingSetUserBlockInSystemStatusResponseStruct
-	(*RatingGetUserStatusRequestStruct)(nil),                   // 18: companyGrpc.RatingGetUserStatusRequestStruct
-	(*RatingGetUserStatusResponseStruct)(nil),                  // 19: companyGrpc.RatingGetUserStatusResponseStruct
-	(*RatingGetListByDayRequestStruct)(nil),                    // 20: companyGrpc.RatingGetListByDayRequestStruct
-	(*UserDayStats)(nil),                                       // 21: companyGrpc.UserDayStats
-	(*RatingGetListByDayResponseStruct)(nil),                   // 22: companyGrpc.RatingGetListByDayResponseStruct
-	(*EventVersionItem)(nil),                                   // 23: companyGrpc.EventVersionItem
-	(*ConversationReactionStruct)(nil),                         // 24: companyGrpc.ConversationReactionStruct
-	(*ReactionsAddInConversationRequestStruct)(nil),            // 25: companyGrpc.ReactionsAddInConversationRequestStruct
-	(*ReactionsAddInConversationResponseStruct)(nil),           // 26: companyGrpc.ReactionsAddInConversationResponseStruct
-	(*ReactionsRemoveInConversationRequestStruct)(nil),         // 27: companyGrpc.ReactionsRemoveInConversationRequestStruct
-	(*ReactionsRemoveInConversationResponseStruct)(nil),        // 28: companyGrpc.ReactionsRemoveInConversationResponseStruct
-	(*ThreadReactionStruct)(nil),                               // 29: companyGrpc.ThreadReactionStruct
-	(*ReactionsAddInThreadRequestStruct)(nil),                  // 30: companyGrpc.ReactionsAddInThreadRequestStruct
-	(*ReactionsAddInThreadResponseStruct)(nil),                 // 31: companyGrpc.ReactionsAddInThreadResponseStruct
-	(*ReactionsRemoveInThreadRequestStruct)(nil),               // 32: companyGrpc.ReactionsRemoveInThreadRequestStruct
-	(*ReactionsRemoveInThreadResponseStruct)(nil),              // 33: companyGrpc.ReactionsRemoveInThreadResponseStruct
-	(*SystemStatusRequestStruct)(nil),                          // 34: companyGrpc.SystemStatusRequestStruct
-	(*SystemStatusResponseStruct)(nil),                         // 35: companyGrpc.SystemStatusResponseStruct
-	(*SystemTraceGoroutineRequestStruct)(nil),                  // 36: companyGrpc.SystemTraceGoroutineRequestStruct
-	(*SystemTraceGoroutineResponseStruct)(nil),                 // 37: companyGrpc.SystemTraceGoroutineResponseStruct
-	(*SystemTraceMemoryRequestStruct)(nil),                     // 38: companyGrpc.SystemTraceMemoryRequestStruct
-	(*SystemTraceMemoryResponseStruct)(nil),                    // 39: companyGrpc.SystemTraceMemoryResponseStruct
-	(*SystemCpuProfileRequestStruct)(nil),                      // 40: companyGrpc.SystemCpuProfileRequestStruct
-	(*SystemCpuProfileResponseStruct)(nil),                     // 41: companyGrpc.SystemCpuProfileResponseStruct
-	(*SystemReloadConfigRequestStruct)(nil),                    // 42: companyGrpc.SystemReloadConfigRequestStruct
-	(*SystemReloadConfigResponseStruct)(nil),                   // 43: companyGrpc.SystemReloadConfigResponseStruct
-	(*SystemReloadShardingRequestStruct)(nil),                  // 44: companyGrpc.SystemReloadShardingRequestStruct
-	(*SystemReloadShardingResponseStruct)(nil),                 // 45: companyGrpc.SystemReloadShardingResponseStruct
-	(*SystemCheckShardingRequestStruct)(nil),                   // 46: companyGrpc.SystemCheckShardingRequestStruct
-	(*SystemCheckShardingResponseStruct)(nil),                  // 47: companyGrpc.SystemCheckShardingResponseStruct
-	nil, // 48: companyGrpc.UserRating.EventCountListEntry
-	nil, // 49: companyGrpc.RatingGetByUserIdResponseStruct.EventCountListEntry
-	nil, // 50: companyGrpc.UserDayStats.DataEntry
+	(*RatingIncDayRatingEventCountForUserRequestStruct)(nil),   // 0: companyGrpc.RatingIncDayRatingEventCountForUserRequestStruct
+	(*RatingIncDayRatingEventCountForUserResponseStruct)(nil),  // 1: companyGrpc.RatingIncDayRatingEventCountForUserResponseStruct
+	(*RatingIncRequestStruct)(nil),                             // 2: companyGrpc.RatingIncRequestStruct
+	(*RatingIncResponseStruct)(nil),                            // 3: companyGrpc.RatingIncResponseStruct
+	(*RatingGetRequestStruct)(nil),                             // 4: companyGrpc.RatingGetRequestStruct
+	(*TopItem)(nil),                                            // 5: companyGrpc.TopItem
+	(*RatingGetResponseStruct)(nil),                            // 6: companyGrpc.RatingGetResponseStruct
+	(*UserRating)(nil),                                         // 7: companyGrpc.UserRating
+	(*RatingGetByUserIdRequestStruct)(nil),                     // 8: companyGrpc.RatingGetByUserIdRequestStruct
+	(*RatingGetByUserIdResponseStruct)(nil),                    // 9: companyGrpc.RatingGetByUserIdResponseStruct
+	(*RatingGetByUserIdListResponseStruct)(nil),                // 10: companyGrpc.RatingGetByUserIdListResponseStruct
+	(*RatingGetEventCountByIntervalRequestStruct)(nil),         // 11: companyGrpc.RatingGetEventCountByIntervalRequestStruct
+	(*EventCount)(nil),                                         // 12: companyGrpc.EventCount
+	(*RatingGetEventCountByIntervalResponseStruct)(nil),        // 13: companyGrpc.RatingGetEventCountByIntervalResponseStruct
+	(*RatingGetGeneralEventCountByIntervalRequestStruct)(nil),  // 14: companyGrpc.RatingGetGeneralEventCountByIntervalRequestStruct
+	(*RatingGetGeneralEventCountByIntervalResponseStruct)(nil), // 15: companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct
+	(*RatingForceSaveCacheRequestStruct)(nil),                  // 16: companyGrpc.RatingForceSaveCacheRequestStruct
+	(*RatingForceSaveCacheResponseStruct)(nil),                 // 17: companyGrpc.RatingForceSaveCacheResponseStruct
+	(*RatingSetUserBlockInSystemStatusRequestStruct)(nil),      // 18: companyGrpc.RatingSetUserBlockInSystemStatusRequestStruct
+	(*RatingSetUserBlockInSystemStatusResponseStruct)(nil),     // 19: companyGrpc.RatingSetUserBlockInSystemStatusResponseStruct
+	(*RatingGetUserStatusRequestStruct)(nil),                   // 20: companyGrpc.RatingGetUserStatusRequestStruct
+	(*RatingGetUserStatusResponseStruct)(nil),                  // 21: companyGrpc.RatingGetUserStatusResponseStruct
+	(*RatingGetListByDayRequestStruct)(nil),                    // 22: companyGrpc.RatingGetListByDayRequestStruct
+	(*UserDayStats)(nil),                                       // 23: companyGrpc.UserDayStats
+	(*RatingGetListByDayResponseStruct)(nil),                   // 24: companyGrpc.RatingGetListByDayResponseStruct
+	(*EventVersionItem)(nil),                                   // 25: companyGrpc.EventVersionItem
+	(*ConversationReactionStruct)(nil),                         // 26: companyGrpc.ConversationReactionStruct
+	(*ReactionsAddInConversationRequestStruct)(nil),            // 27: companyGrpc.ReactionsAddInConversationRequestStruct
+	(*ReactionsAddInConversationResponseStruct)(nil),           // 28: companyGrpc.ReactionsAddInConversationResponseStruct
+	(*ReactionsRemoveInConversationRequestStruct)(nil),         // 29: companyGrpc.ReactionsRemoveInConversationRequestStruct
+	(*ReactionsRemoveInConversationResponseStruct)(nil),        // 30: companyGrpc.ReactionsRemoveInConversationResponseStruct
+	(*ThreadReactionStruct)(nil),                               // 31: companyGrpc.ThreadReactionStruct
+	(*ReactionsAddInThreadRequestStruct)(nil),                  // 32: companyGrpc.ReactionsAddInThreadRequestStruct
+	(*ReactionsAddInThreadResponseStruct)(nil),                 // 33: companyGrpc.ReactionsAddInThreadResponseStruct
+	(*ReactionsRemoveInThreadRequestStruct)(nil),               // 34: companyGrpc.ReactionsRemoveInThreadRequestStruct
+	(*ReactionsRemoveInThreadResponseStruct)(nil),              // 35: companyGrpc.ReactionsRemoveInThreadResponseStruct
+	(*ReadMessageAddRequestStruct)(nil),                        // 36: companyGrpc.ReadMessageAddRequestStruct
+	(*ReadMessageAddResponseStruct)(nil),                       // 37: companyGrpc.ReadMessageAddResponseStruct
+	(*SystemStatusRequestStruct)(nil),                          // 38: companyGrpc.SystemStatusRequestStruct
+	(*SystemStatusResponseStruct)(nil),                         // 39: companyGrpc.SystemStatusResponseStruct
+	(*SystemTraceGoroutineRequestStruct)(nil),                  // 40: companyGrpc.SystemTraceGoroutineRequestStruct
+	(*SystemTraceGoroutineResponseStruct)(nil),                 // 41: companyGrpc.SystemTraceGoroutineResponseStruct
+	(*SystemTraceMemoryRequestStruct)(nil),                     // 42: companyGrpc.SystemTraceMemoryRequestStruct
+	(*SystemTraceMemoryResponseStruct)(nil),                    // 43: companyGrpc.SystemTraceMemoryResponseStruct
+	(*SystemCpuProfileRequestStruct)(nil),                      // 44: companyGrpc.SystemCpuProfileRequestStruct
+	(*SystemCpuProfileResponseStruct)(nil),                     // 45: companyGrpc.SystemCpuProfileResponseStruct
+	(*SystemReloadConfigRequestStruct)(nil),                    // 46: companyGrpc.SystemReloadConfigRequestStruct
+	(*SystemReloadConfigResponseStruct)(nil),                   // 47: companyGrpc.SystemReloadConfigResponseStruct
+	(*SystemReloadShardingRequestStruct)(nil),                  // 48: companyGrpc.SystemReloadShardingRequestStruct
+	(*SystemReloadShardingResponseStruct)(nil),                 // 49: companyGrpc.SystemReloadShardingResponseStruct
+	(*SystemCheckShardingRequestStruct)(nil),                   // 50: companyGrpc.SystemCheckShardingRequestStruct
+	(*SystemCheckShardingResponseStruct)(nil),                  // 51: companyGrpc.SystemCheckShardingResponseStruct
+	nil, // 52: companyGrpc.UserRating.EventCountListEntry
+	nil, // 53: companyGrpc.RatingGetByUserIdResponseStruct.EventCountListEntry
+	nil, // 54: companyGrpc.UserDayStats.DataEntry
 }
 var file_proto_go_company_proto_depIdxs = []int32{
-	3,  // 0: companyGrpc.RatingGetResponseStruct.top_list:type_name -> companyGrpc.TopItem
-	48, // 1: companyGrpc.UserRating.event_count_list:type_name -> companyGrpc.UserRating.EventCountListEntry
-	49, // 2: companyGrpc.RatingGetByUserIdResponseStruct.event_count_list:type_name -> companyGrpc.RatingGetByUserIdResponseStruct.EventCountListEntry
-	7,  // 3: companyGrpc.RatingGetByUserIdListResponseStruct.user_rating_list:type_name -> companyGrpc.RatingGetByUserIdResponseStruct
-	10, // 4: companyGrpc.RatingGetEventCountByIntervalResponseStruct.event_count_list:type_name -> companyGrpc.EventCount
-	10, // 5: companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct.event_count_list:type_name -> companyGrpc.EventCount
-	50, // 6: companyGrpc.UserDayStats.data:type_name -> companyGrpc.UserDayStats.DataEntry
-	21, // 7: companyGrpc.RatingGetListByDayResponseStruct.user_day_stats_list:type_name -> companyGrpc.UserDayStats
-	23, // 8: companyGrpc.ConversationReactionStruct.event_version_list:type_name -> companyGrpc.EventVersionItem
-	24, // 9: companyGrpc.ReactionsAddInConversationRequestStruct.conversation_reaction:type_name -> companyGrpc.ConversationReactionStruct
-	24, // 10: companyGrpc.ReactionsRemoveInConversationRequestStruct.conversation_reaction:type_name -> companyGrpc.ConversationReactionStruct
-	23, // 11: companyGrpc.ThreadReactionStruct.event_version_list:type_name -> companyGrpc.EventVersionItem
-	29, // 12: companyGrpc.ReactionsAddInThreadRequestStruct.thread_reaction:type_name -> companyGrpc.ThreadReactionStruct
-	29, // 13: companyGrpc.ReactionsRemoveInThreadRequestStruct.thread_reaction:type_name -> companyGrpc.ThreadReactionStruct
-	0,  // 14: companyGrpc.company.RatingInc:input_type -> companyGrpc.RatingIncRequestStruct
-	2,  // 15: companyGrpc.company.RatingGet:input_type -> companyGrpc.RatingGetRequestStruct
-	6,  // 16: companyGrpc.company.RatingGetByUserId:input_type -> companyGrpc.RatingGetByUserIdRequestStruct
-	9,  // 17: companyGrpc.company.RatingGetEventCountByInterval:input_type -> companyGrpc.RatingGetEventCountByIntervalRequestStruct
-	12, // 18: companyGrpc.company.RatingGetGeneralEventCountByInterval:input_type -> companyGrpc.RatingGetGeneralEventCountByIntervalRequestStruct
-	14, // 19: companyGrpc.company.RatingForceSaveCache:input_type -> companyGrpc.RatingForceSaveCacheRequestStruct
-	16, // 20: companyGrpc.company.RatingSetUserBlockInSystemStatus:input_type -> companyGrpc.RatingSetUserBlockInSystemStatusRequestStruct
-	18, // 21: companyGrpc.company.RatingGetUserStatus:input_type -> companyGrpc.RatingGetUserStatusRequestStruct
-	20, // 22: companyGrpc.company.RatingGetListByDay:input_type -> companyGrpc.RatingGetListByDayRequestStruct
-	25, // 23: companyGrpc.company.ReactionsAddInConversation:input_type -> companyGrpc.ReactionsAddInConversationRequestStruct
-	27, // 24: companyGrpc.company.ReactionsRemoveInConversation:input_type -> companyGrpc.ReactionsRemoveInConversationRequestStruct
-	30, // 25: companyGrpc.company.ReactionsAddInThread:input_type -> companyGrpc.ReactionsAddInThreadRequestStruct
-	32, // 26: companyGrpc.company.ReactionsRemoveInThread:input_type -> companyGrpc.ReactionsRemoveInThreadRequestStruct
-	34, // 27: companyGrpc.company.SystemStatus:input_type -> companyGrpc.SystemStatusRequestStruct
-	36, // 28: companyGrpc.company.SystemTraceGoroutine:input_type -> companyGrpc.SystemTraceGoroutineRequestStruct
-	38, // 29: companyGrpc.company.SystemTraceMemory:input_type -> companyGrpc.SystemTraceMemoryRequestStruct
-	40, // 30: companyGrpc.company.SystemCpuProfile:input_type -> companyGrpc.SystemCpuProfileRequestStruct
-	42, // 31: companyGrpc.company.SystemReloadConfig:input_type -> companyGrpc.SystemReloadConfigRequestStruct
-	44, // 32: companyGrpc.company.SystemReloadSharding:input_type -> companyGrpc.SystemReloadShardingRequestStruct
-	46, // 33: companyGrpc.company.SystemCheckSharding:input_type -> companyGrpc.SystemCheckShardingRequestStruct
-	1,  // 34: companyGrpc.company.RatingInc:output_type -> companyGrpc.RatingIncResponseStruct
-	4,  // 35: companyGrpc.company.RatingGet:output_type -> companyGrpc.RatingGetResponseStruct
-	8,  // 36: companyGrpc.company.RatingGetByUserId:output_type -> companyGrpc.RatingGetByUserIdListResponseStruct
-	11, // 37: companyGrpc.company.RatingGetEventCountByInterval:output_type -> companyGrpc.RatingGetEventCountByIntervalResponseStruct
-	13, // 38: companyGrpc.company.RatingGetGeneralEventCountByInterval:output_type -> companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct
-	15, // 39: companyGrpc.company.RatingForceSaveCache:output_type -> companyGrpc.RatingForceSaveCacheResponseStruct
-	17, // 40: companyGrpc.company.RatingSetUserBlockInSystemStatus:output_type -> companyGrpc.RatingSetUserBlockInSystemStatusResponseStruct
-	19, // 41: companyGrpc.company.RatingGetUserStatus:output_type -> companyGrpc.RatingGetUserStatusResponseStruct
-	22, // 42: companyGrpc.company.RatingGetListByDay:output_type -> companyGrpc.RatingGetListByDayResponseStruct
-	26, // 43: companyGrpc.company.ReactionsAddInConversation:output_type -> companyGrpc.ReactionsAddInConversationResponseStruct
-	28, // 44: companyGrpc.company.ReactionsRemoveInConversation:output_type -> companyGrpc.ReactionsRemoveInConversationResponseStruct
-	31, // 45: companyGrpc.company.ReactionsAddInThread:output_type -> companyGrpc.ReactionsAddInThreadResponseStruct
-	33, // 46: companyGrpc.company.ReactionsRemoveInThread:output_type -> companyGrpc.ReactionsRemoveInThreadResponseStruct
-	35, // 47: companyGrpc.company.SystemStatus:output_type -> companyGrpc.SystemStatusResponseStruct
-	37, // 48: companyGrpc.company.SystemTraceGoroutine:output_type -> companyGrpc.SystemTraceGoroutineResponseStruct
-	39, // 49: companyGrpc.company.SystemTraceMemory:output_type -> companyGrpc.SystemTraceMemoryResponseStruct
-	41, // 50: companyGrpc.company.SystemCpuProfile:output_type -> companyGrpc.SystemCpuProfileResponseStruct
-	43, // 51: companyGrpc.company.SystemReloadConfig:output_type -> companyGrpc.SystemReloadConfigResponseStruct
-	45, // 52: companyGrpc.company.SystemReloadSharding:output_type -> companyGrpc.SystemReloadShardingResponseStruct
-	47, // 53: companyGrpc.company.SystemCheckSharding:output_type -> companyGrpc.SystemCheckShardingResponseStruct
-	34, // [34:54] is the sub-list for method output_type
-	14, // [14:34] is the sub-list for method input_type
+	5,  // 0: companyGrpc.RatingGetResponseStruct.top_list:type_name -> companyGrpc.TopItem
+	52, // 1: companyGrpc.UserRating.event_count_list:type_name -> companyGrpc.UserRating.EventCountListEntry
+	53, // 2: companyGrpc.RatingGetByUserIdResponseStruct.event_count_list:type_name -> companyGrpc.RatingGetByUserIdResponseStruct.EventCountListEntry
+	9,  // 3: companyGrpc.RatingGetByUserIdListResponseStruct.user_rating_list:type_name -> companyGrpc.RatingGetByUserIdResponseStruct
+	12, // 4: companyGrpc.RatingGetEventCountByIntervalResponseStruct.event_count_list:type_name -> companyGrpc.EventCount
+	12, // 5: companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct.event_count_list:type_name -> companyGrpc.EventCount
+	54, // 6: companyGrpc.UserDayStats.data:type_name -> companyGrpc.UserDayStats.DataEntry
+	23, // 7: companyGrpc.RatingGetListByDayResponseStruct.user_day_stats_list:type_name -> companyGrpc.UserDayStats
+	25, // 8: companyGrpc.ConversationReactionStruct.event_version_list:type_name -> companyGrpc.EventVersionItem
+	26, // 9: companyGrpc.ReactionsAddInConversationRequestStruct.conversation_reaction:type_name -> companyGrpc.ConversationReactionStruct
+	26, // 10: companyGrpc.ReactionsRemoveInConversationRequestStruct.conversation_reaction:type_name -> companyGrpc.ConversationReactionStruct
+	25, // 11: companyGrpc.ThreadReactionStruct.event_version_list:type_name -> companyGrpc.EventVersionItem
+	31, // 12: companyGrpc.ReactionsAddInThreadRequestStruct.thread_reaction:type_name -> companyGrpc.ThreadReactionStruct
+	31, // 13: companyGrpc.ReactionsRemoveInThreadRequestStruct.thread_reaction:type_name -> companyGrpc.ThreadReactionStruct
+	0,  // 14: companyGrpc.company.RatingIncDayRatingEventCountForUser:input_type -> companyGrpc.RatingIncDayRatingEventCountForUserRequestStruct
+	2,  // 15: companyGrpc.company.RatingInc:input_type -> companyGrpc.RatingIncRequestStruct
+	4,  // 16: companyGrpc.company.RatingGet:input_type -> companyGrpc.RatingGetRequestStruct
+	8,  // 17: companyGrpc.company.RatingGetByUserId:input_type -> companyGrpc.RatingGetByUserIdRequestStruct
+	11, // 18: companyGrpc.company.RatingGetEventCountByInterval:input_type -> companyGrpc.RatingGetEventCountByIntervalRequestStruct
+	14, // 19: companyGrpc.company.RatingGetGeneralEventCountByInterval:input_type -> companyGrpc.RatingGetGeneralEventCountByIntervalRequestStruct
+	16, // 20: companyGrpc.company.RatingForceSaveCache:input_type -> companyGrpc.RatingForceSaveCacheRequestStruct
+	18, // 21: companyGrpc.company.RatingSetUserBlockInSystemStatus:input_type -> companyGrpc.RatingSetUserBlockInSystemStatusRequestStruct
+	20, // 22: companyGrpc.company.RatingGetUserStatus:input_type -> companyGrpc.RatingGetUserStatusRequestStruct
+	22, // 23: companyGrpc.company.RatingGetListByDay:input_type -> companyGrpc.RatingGetListByDayRequestStruct
+	27, // 24: companyGrpc.company.ReactionsAddInConversation:input_type -> companyGrpc.ReactionsAddInConversationRequestStruct
+	29, // 25: companyGrpc.company.ReactionsRemoveInConversation:input_type -> companyGrpc.ReactionsRemoveInConversationRequestStruct
+	32, // 26: companyGrpc.company.ReactionsAddInThread:input_type -> companyGrpc.ReactionsAddInThreadRequestStruct
+	34, // 27: companyGrpc.company.ReactionsRemoveInThread:input_type -> companyGrpc.ReactionsRemoveInThreadRequestStruct
+	36, // 28: companyGrpc.company.ReadMessageAdd:input_type -> companyGrpc.ReadMessageAddRequestStruct
+	38, // 29: companyGrpc.company.SystemStatus:input_type -> companyGrpc.SystemStatusRequestStruct
+	40, // 30: companyGrpc.company.SystemTraceGoroutine:input_type -> companyGrpc.SystemTraceGoroutineRequestStruct
+	42, // 31: companyGrpc.company.SystemTraceMemory:input_type -> companyGrpc.SystemTraceMemoryRequestStruct
+	44, // 32: companyGrpc.company.SystemCpuProfile:input_type -> companyGrpc.SystemCpuProfileRequestStruct
+	46, // 33: companyGrpc.company.SystemReloadConfig:input_type -> companyGrpc.SystemReloadConfigRequestStruct
+	48, // 34: companyGrpc.company.SystemReloadSharding:input_type -> companyGrpc.SystemReloadShardingRequestStruct
+	50, // 35: companyGrpc.company.SystemCheckSharding:input_type -> companyGrpc.SystemCheckShardingRequestStruct
+	1,  // 36: companyGrpc.company.RatingIncDayRatingEventCountForUser:output_type -> companyGrpc.RatingIncDayRatingEventCountForUserResponseStruct
+	3,  // 37: companyGrpc.company.RatingInc:output_type -> companyGrpc.RatingIncResponseStruct
+	6,  // 38: companyGrpc.company.RatingGet:output_type -> companyGrpc.RatingGetResponseStruct
+	10, // 39: companyGrpc.company.RatingGetByUserId:output_type -> companyGrpc.RatingGetByUserIdListResponseStruct
+	13, // 40: companyGrpc.company.RatingGetEventCountByInterval:output_type -> companyGrpc.RatingGetEventCountByIntervalResponseStruct
+	15, // 41: companyGrpc.company.RatingGetGeneralEventCountByInterval:output_type -> companyGrpc.RatingGetGeneralEventCountByIntervalResponseStruct
+	17, // 42: companyGrpc.company.RatingForceSaveCache:output_type -> companyGrpc.RatingForceSaveCacheResponseStruct
+	19, // 43: companyGrpc.company.RatingSetUserBlockInSystemStatus:output_type -> companyGrpc.RatingSetUserBlockInSystemStatusResponseStruct
+	21, // 44: companyGrpc.company.RatingGetUserStatus:output_type -> companyGrpc.RatingGetUserStatusResponseStruct
+	24, // 45: companyGrpc.company.RatingGetListByDay:output_type -> companyGrpc.RatingGetListByDayResponseStruct
+	28, // 46: companyGrpc.company.ReactionsAddInConversation:output_type -> companyGrpc.ReactionsAddInConversationResponseStruct
+	30, // 47: companyGrpc.company.ReactionsRemoveInConversation:output_type -> companyGrpc.ReactionsRemoveInConversationResponseStruct
+	33, // 48: companyGrpc.company.ReactionsAddInThread:output_type -> companyGrpc.ReactionsAddInThreadResponseStruct
+	35, // 49: companyGrpc.company.ReactionsRemoveInThread:output_type -> companyGrpc.ReactionsRemoveInThreadResponseStruct
+	37, // 50: companyGrpc.company.ReadMessageAdd:output_type -> companyGrpc.ReadMessageAddResponseStruct
+	39, // 51: companyGrpc.company.SystemStatus:output_type -> companyGrpc.SystemStatusResponseStruct
+	41, // 52: companyGrpc.company.SystemTraceGoroutine:output_type -> companyGrpc.SystemTraceGoroutineResponseStruct
+	43, // 53: companyGrpc.company.SystemTraceMemory:output_type -> companyGrpc.SystemTraceMemoryResponseStruct
+	45, // 54: companyGrpc.company.SystemCpuProfile:output_type -> companyGrpc.SystemCpuProfileResponseStruct
+	47, // 55: companyGrpc.company.SystemReloadConfig:output_type -> companyGrpc.SystemReloadConfigResponseStruct
+	49, // 56: companyGrpc.company.SystemReloadSharding:output_type -> companyGrpc.SystemReloadShardingResponseStruct
+	51, // 57: companyGrpc.company.SystemCheckSharding:output_type -> companyGrpc.SystemCheckShardingResponseStruct
+	36, // [36:58] is the sub-list for method output_type
+	14, // [14:36] is the sub-list for method input_type
 	14, // [14:14] is the sub-list for extension type_name
 	14, // [14:14] is the sub-list for extension extendee
 	0,  // [0:14] is the sub-list for field type_name
@@ -3561,7 +3966,7 @@ func file_proto_go_company_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_proto_go_company_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingIncRequestStruct); i {
+			switch v := v.(*RatingIncDayRatingEventCountForUserRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3573,7 +3978,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingIncResponseStruct); i {
+			switch v := v.(*RatingIncDayRatingEventCountForUserResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3585,7 +3990,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetRequestStruct); i {
+			switch v := v.(*RatingIncRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3597,7 +4002,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TopItem); i {
+			switch v := v.(*RatingIncResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3609,7 +4014,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetResponseStruct); i {
+			switch v := v.(*RatingGetRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3621,7 +4026,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserRating); i {
+			switch v := v.(*TopItem); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3633,7 +4038,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetByUserIdRequestStruct); i {
+			switch v := v.(*RatingGetResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3645,7 +4050,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetByUserIdResponseStruct); i {
+			switch v := v.(*UserRating); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3657,7 +4062,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetByUserIdListResponseStruct); i {
+			switch v := v.(*RatingGetByUserIdRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3669,7 +4074,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetEventCountByIntervalRequestStruct); i {
+			switch v := v.(*RatingGetByUserIdResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3681,7 +4086,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EventCount); i {
+			switch v := v.(*RatingGetByUserIdListResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3693,7 +4098,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetEventCountByIntervalResponseStruct); i {
+			switch v := v.(*RatingGetEventCountByIntervalRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3705,7 +4110,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetGeneralEventCountByIntervalRequestStruct); i {
+			switch v := v.(*EventCount); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3717,7 +4122,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetGeneralEventCountByIntervalResponseStruct); i {
+			switch v := v.(*RatingGetEventCountByIntervalResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3729,7 +4134,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingForceSaveCacheRequestStruct); i {
+			switch v := v.(*RatingGetGeneralEventCountByIntervalRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3741,7 +4146,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingForceSaveCacheResponseStruct); i {
+			switch v := v.(*RatingGetGeneralEventCountByIntervalResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3753,7 +4158,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingSetUserBlockInSystemStatusRequestStruct); i {
+			switch v := v.(*RatingForceSaveCacheRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3765,7 +4170,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingSetUserBlockInSystemStatusResponseStruct); i {
+			switch v := v.(*RatingForceSaveCacheResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3777,7 +4182,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetUserStatusRequestStruct); i {
+			switch v := v.(*RatingSetUserBlockInSystemStatusRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3789,7 +4194,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetUserStatusResponseStruct); i {
+			switch v := v.(*RatingSetUserBlockInSystemStatusResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3801,7 +4206,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetListByDayRequestStruct); i {
+			switch v := v.(*RatingGetUserStatusRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3813,7 +4218,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserDayStats); i {
+			switch v := v.(*RatingGetUserStatusResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3825,7 +4230,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RatingGetListByDayResponseStruct); i {
+			switch v := v.(*RatingGetListByDayRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3837,7 +4242,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EventVersionItem); i {
+			switch v := v.(*UserDayStats); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3849,7 +4254,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConversationReactionStruct); i {
+			switch v := v.(*RatingGetListByDayResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3861,7 +4266,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsAddInConversationRequestStruct); i {
+			switch v := v.(*EventVersionItem); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3873,7 +4278,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsAddInConversationResponseStruct); i {
+			switch v := v.(*ConversationReactionStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3885,7 +4290,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsRemoveInConversationRequestStruct); i {
+			switch v := v.(*ReactionsAddInConversationRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3897,7 +4302,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsRemoveInConversationResponseStruct); i {
+			switch v := v.(*ReactionsAddInConversationResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3909,7 +4314,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ThreadReactionStruct); i {
+			switch v := v.(*ReactionsRemoveInConversationRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3921,7 +4326,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsAddInThreadRequestStruct); i {
+			switch v := v.(*ReactionsRemoveInConversationResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3933,7 +4338,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsAddInThreadResponseStruct); i {
+			switch v := v.(*ThreadReactionStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3945,7 +4350,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsRemoveInThreadRequestStruct); i {
+			switch v := v.(*ReactionsAddInThreadRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3957,7 +4362,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReactionsRemoveInThreadResponseStruct); i {
+			switch v := v.(*ReactionsAddInThreadResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3969,7 +4374,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemStatusRequestStruct); i {
+			switch v := v.(*ReactionsRemoveInThreadRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3981,7 +4386,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemStatusResponseStruct); i {
+			switch v := v.(*ReactionsRemoveInThreadResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3993,7 +4398,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemTraceGoroutineRequestStruct); i {
+			switch v := v.(*ReadMessageAddRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4005,7 +4410,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemTraceGoroutineResponseStruct); i {
+			switch v := v.(*ReadMessageAddResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4017,7 +4422,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemTraceMemoryRequestStruct); i {
+			switch v := v.(*SystemStatusRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4029,7 +4434,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemTraceMemoryResponseStruct); i {
+			switch v := v.(*SystemStatusResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4041,7 +4446,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemCpuProfileRequestStruct); i {
+			switch v := v.(*SystemTraceGoroutineRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4053,7 +4458,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemCpuProfileResponseStruct); i {
+			switch v := v.(*SystemTraceGoroutineResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4065,7 +4470,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemReloadConfigRequestStruct); i {
+			switch v := v.(*SystemTraceMemoryRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4077,7 +4482,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemReloadConfigResponseStruct); i {
+			switch v := v.(*SystemTraceMemoryResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4089,7 +4494,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemReloadShardingRequestStruct); i {
+			switch v := v.(*SystemCpuProfileRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4101,7 +4506,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemReloadShardingResponseStruct); i {
+			switch v := v.(*SystemCpuProfileResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4113,7 +4518,7 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SystemCheckShardingRequestStruct); i {
+			switch v := v.(*SystemReloadConfigRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4125,6 +4530,54 @@ func file_proto_go_company_proto_init() {
 			}
 		}
 		file_proto_go_company_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SystemReloadConfigResponseStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_company_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SystemReloadShardingRequestStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_company_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SystemReloadShardingResponseStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_company_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SystemCheckShardingRequestStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_company_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SystemCheckShardingResponseStruct); i {
 			case 0:
 				return &v.state
@@ -4143,7 +4596,7 @@ func file_proto_go_company_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_proto_go_company_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   51,
+			NumMessages:   55,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -4169,6 +4622,7 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type CompanyClient interface {
+	RatingIncDayRatingEventCountForUser(ctx context.Context, in *RatingIncDayRatingEventCountForUserRequestStruct, opts ...grpc.CallOption) (*RatingIncDayRatingEventCountForUserResponseStruct, error)
 	RatingInc(ctx context.Context, in *RatingIncRequestStruct, opts ...grpc.CallOption) (*RatingIncResponseStruct, error)
 	RatingGet(ctx context.Context, in *RatingGetRequestStruct, opts ...grpc.CallOption) (*RatingGetResponseStruct, error)
 	RatingGetByUserId(ctx context.Context, in *RatingGetByUserIdRequestStruct, opts ...grpc.CallOption) (*RatingGetByUserIdListResponseStruct, error)
@@ -4182,6 +4636,7 @@ type CompanyClient interface {
 	ReactionsRemoveInConversation(ctx context.Context, in *ReactionsRemoveInConversationRequestStruct, opts ...grpc.CallOption) (*ReactionsRemoveInConversationResponseStruct, error)
 	ReactionsAddInThread(ctx context.Context, in *ReactionsAddInThreadRequestStruct, opts ...grpc.CallOption) (*ReactionsAddInThreadResponseStruct, error)
 	ReactionsRemoveInThread(ctx context.Context, in *ReactionsRemoveInThreadRequestStruct, opts ...grpc.CallOption) (*ReactionsRemoveInThreadResponseStruct, error)
+	ReadMessageAdd(ctx context.Context, in *ReadMessageAddRequestStruct, opts ...grpc.CallOption) (*ReadMessageAddResponseStruct, error)
 	SystemStatus(ctx context.Context, in *SystemStatusRequestStruct, opts ...grpc.CallOption) (*SystemStatusResponseStruct, error)
 	SystemTraceGoroutine(ctx context.Context, in *SystemTraceGoroutineRequestStruct, opts ...grpc.CallOption) (*SystemTraceGoroutineResponseStruct, error)
 	SystemTraceMemory(ctx context.Context, in *SystemTraceMemoryRequestStruct, opts ...grpc.CallOption) (*SystemTraceMemoryResponseStruct, error)
@@ -4197,6 +4652,15 @@ type companyClient struct {
 
 func NewCompanyClient(cc grpc.ClientConnInterface) CompanyClient {
 	return &companyClient{cc}
+}
+
+func (c *companyClient) RatingIncDayRatingEventCountForUser(ctx context.Context, in *RatingIncDayRatingEventCountForUserRequestStruct, opts ...grpc.CallOption) (*RatingIncDayRatingEventCountForUserResponseStruct, error) {
+	out := new(RatingIncDayRatingEventCountForUserResponseStruct)
+	err := c.cc.Invoke(ctx, "/companyGrpc.company/RatingIncDayRatingEventCountForUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *companyClient) RatingInc(ctx context.Context, in *RatingIncRequestStruct, opts ...grpc.CallOption) (*RatingIncResponseStruct, error) {
@@ -4316,6 +4780,15 @@ func (c *companyClient) ReactionsRemoveInThread(ctx context.Context, in *Reactio
 	return out, nil
 }
 
+func (c *companyClient) ReadMessageAdd(ctx context.Context, in *ReadMessageAddRequestStruct, opts ...grpc.CallOption) (*ReadMessageAddResponseStruct, error) {
+	out := new(ReadMessageAddResponseStruct)
+	err := c.cc.Invoke(ctx, "/companyGrpc.company/ReadMessageAdd", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *companyClient) SystemStatus(ctx context.Context, in *SystemStatusRequestStruct, opts ...grpc.CallOption) (*SystemStatusResponseStruct, error) {
 	out := new(SystemStatusResponseStruct)
 	err := c.cc.Invoke(ctx, "/companyGrpc.company/SystemStatus", in, out, opts...)
@@ -4381,6 +4854,7 @@ func (c *companyClient) SystemCheckSharding(ctx context.Context, in *SystemCheck
 
 // CompanyServer is the server API for Company service.
 type CompanyServer interface {
+	RatingIncDayRatingEventCountForUser(context.Context, *RatingIncDayRatingEventCountForUserRequestStruct) (*RatingIncDayRatingEventCountForUserResponseStruct, error)
 	RatingInc(context.Context, *RatingIncRequestStruct) (*RatingIncResponseStruct, error)
 	RatingGet(context.Context, *RatingGetRequestStruct) (*RatingGetResponseStruct, error)
 	RatingGetByUserId(context.Context, *RatingGetByUserIdRequestStruct) (*RatingGetByUserIdListResponseStruct, error)
@@ -4394,6 +4868,7 @@ type CompanyServer interface {
 	ReactionsRemoveInConversation(context.Context, *ReactionsRemoveInConversationRequestStruct) (*ReactionsRemoveInConversationResponseStruct, error)
 	ReactionsAddInThread(context.Context, *ReactionsAddInThreadRequestStruct) (*ReactionsAddInThreadResponseStruct, error)
 	ReactionsRemoveInThread(context.Context, *ReactionsRemoveInThreadRequestStruct) (*ReactionsRemoveInThreadResponseStruct, error)
+	ReadMessageAdd(context.Context, *ReadMessageAddRequestStruct) (*ReadMessageAddResponseStruct, error)
 	SystemStatus(context.Context, *SystemStatusRequestStruct) (*SystemStatusResponseStruct, error)
 	SystemTraceGoroutine(context.Context, *SystemTraceGoroutineRequestStruct) (*SystemTraceGoroutineResponseStruct, error)
 	SystemTraceMemory(context.Context, *SystemTraceMemoryRequestStruct) (*SystemTraceMemoryResponseStruct, error)
@@ -4407,6 +4882,9 @@ type CompanyServer interface {
 type UnimplementedCompanyServer struct {
 }
 
+func (*UnimplementedCompanyServer) RatingIncDayRatingEventCountForUser(context.Context, *RatingIncDayRatingEventCountForUserRequestStruct) (*RatingIncDayRatingEventCountForUserResponseStruct, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RatingIncDayRatingEventCountForUser not implemented")
+}
 func (*UnimplementedCompanyServer) RatingInc(context.Context, *RatingIncRequestStruct) (*RatingIncResponseStruct, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RatingInc not implemented")
 }
@@ -4446,6 +4924,9 @@ func (*UnimplementedCompanyServer) ReactionsAddInThread(context.Context, *Reacti
 func (*UnimplementedCompanyServer) ReactionsRemoveInThread(context.Context, *ReactionsRemoveInThreadRequestStruct) (*ReactionsRemoveInThreadResponseStruct, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReactionsRemoveInThread not implemented")
 }
+func (*UnimplementedCompanyServer) ReadMessageAdd(context.Context, *ReadMessageAddRequestStruct) (*ReadMessageAddResponseStruct, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ReadMessageAdd not implemented")
+}
 func (*UnimplementedCompanyServer) SystemStatus(context.Context, *SystemStatusRequestStruct) (*SystemStatusResponseStruct, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SystemStatus not implemented")
 }
@@ -4470,6 +4951,24 @@ func (*UnimplementedCompanyServer) SystemCheckSharding(context.Context, *SystemC
 
 func RegisterCompanyServer(s *grpc.Server, srv CompanyServer) {
 	s.RegisterService(&_Company_serviceDesc, srv)
+}
+
+func _Company_RatingIncDayRatingEventCountForUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RatingIncDayRatingEventCountForUserRequestStruct)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CompanyServer).RatingIncDayRatingEventCountForUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/companyGrpc.company/RatingIncDayRatingEventCountForUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CompanyServer).RatingIncDayRatingEventCountForUser(ctx, req.(*RatingIncDayRatingEventCountForUserRequestStruct))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _Company_RatingInc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -4706,6 +5205,24 @@ func _Company_ReactionsRemoveInThread_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Company_ReadMessageAdd_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReadMessageAddRequestStruct)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CompanyServer).ReadMessageAdd(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/companyGrpc.company/ReadMessageAdd",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CompanyServer).ReadMessageAdd(ctx, req.(*ReadMessageAddRequestStruct))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _Company_SystemStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SystemStatusRequestStruct)
 	if err := dec(in); err != nil {
@@ -4837,6 +5354,10 @@ var _Company_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*CompanyServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
+			MethodName: "RatingIncDayRatingEventCountForUser",
+			Handler:    _Company_RatingIncDayRatingEventCountForUser_Handler,
+		},
+		{
 			MethodName: "RatingInc",
 			Handler:    _Company_RatingInc_Handler,
 		},
@@ -4887,6 +5408,10 @@ var _Company_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ReactionsRemoveInThread",
 			Handler:    _Company_ReactionsRemoveInThread_Handler,
+		},
+		{
+			MethodName: "ReadMessageAdd",
+			Handler:    _Company_ReadMessageAdd_Handler,
 		},
 		{
 			MethodName: "SystemStatus",
