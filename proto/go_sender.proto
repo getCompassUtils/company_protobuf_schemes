@@ -1,6 +1,8 @@
 syntax = "proto3";
 package senderGrpc;
 option go_package = "/sender";
+option php_namespace = "Company\\SenderGrpc";
+option php_metadata_namespace = "Company\\GPBMetadata";
 
 // сервис, который описывает все метод go_sender
 service sender {

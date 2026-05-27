@@ -6,10 +6,11 @@
 		"psr-4": {
 			"CompanyCacheGrpc\\": ["grpc/CompanyCacheGrpc", "php/CompanyCacheGrpc"],
 			"CompanyGrpc\\" : ["grpc/CompanyGrpc", "php/CompanyGrpc"],
-			"SenderGrpc\\": ["grpc/SenderGrpc", "php/SenderGrpc"],
-			"EventGrpc\\": ["grpc/EventGrpc", "php/EventGrpc"],
+			"Company\\SenderGrpc\\": ["grpc/Company/SenderGrpc", "php/Company/SenderGrpc"],
+			"Company\\EventGrpc\\": ["grpc/Company/EventGrpc", "php/Company/EventGrpc"],
 			"RatingGrpc\\": ["grpc/RatingGrpc", "php/RatingGrpc"],
-			"GPBMetadata\\": "php/GPBMetadata"
+			"GPBMetadata\\": "php/GPBMetadata",
+			"Company\\GPBMetadata\\": "php/Company/GPBMetadata"
 		}
 	},
 	"repositories":[

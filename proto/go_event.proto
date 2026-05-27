@@ -1,6 +1,8 @@
 syntax = "proto3";
 package eventGrpc;
 option go_package = "/event";
+option php_namespace = "Company\\EventGrpc";
+option php_metadata_namespace = "Company\\GPBMetadata";
 
 // сервис, который описывает все метод go_event
 service event {
