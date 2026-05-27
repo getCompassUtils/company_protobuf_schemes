@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Company\EventGrpc;
+namespace EventGrpc;
 
 /**
  * сервис, который описывает все метод go_event
@@ -18,44 +18,44 @@ class eventClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Company\EventGrpc\EventSetEventTrapRequestStruct $argument input argument
+     * @param \EventGrpc\EventSetEventTrapRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function EventSetEventTrap(\Company\EventGrpc\EventSetEventTrapRequestStruct $argument,
+    public function EventSetEventTrap(\EventGrpc\EventSetEventTrapRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/eventGrpc.event/EventSetEventTrap',
         $argument,
-        ['\Company\EventGrpc\EventSetEventTrapResponseStruct', 'decode'],
+        ['\EventGrpc\EventSetEventTrapResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\EventGrpc\EventWaitEventTrapRequestStruct $argument input argument
+     * @param \EventGrpc\EventWaitEventTrapRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function EventWaitEventTrap(\Company\EventGrpc\EventWaitEventTrapRequestStruct $argument,
+    public function EventWaitEventTrap(\EventGrpc\EventWaitEventTrapRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/eventGrpc.event/EventWaitEventTrap',
         $argument,
-        ['\Company\EventGrpc\EventWaitEventTrapResponseStruct', 'decode'],
+        ['\EventGrpc\EventWaitEventTrapResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\EventGrpc\TaskPushRequestStruct $argument input argument
+     * @param \EventGrpc\TaskPushRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function TaskPush(\Company\EventGrpc\TaskPushRequestStruct $argument,
+    public function TaskPush(\EventGrpc\TaskPushRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/eventGrpc.event/TaskPush',
         $argument,
-        ['\Company\EventGrpc\TaskPushResponseStruct', 'decode'],
+        ['\EventGrpc\TaskPushResponseStruct', 'decode'],
         $metadata, $options);
     }
 

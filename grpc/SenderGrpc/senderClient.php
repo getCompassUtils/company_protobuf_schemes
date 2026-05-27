@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Company\SenderGrpc;
+namespace SenderGrpc;
 
 /**
  * сервис, который описывает все метод go_sender
@@ -18,297 +18,297 @@ class senderClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSetTokenRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSetTokenRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSetToken(\Company\SenderGrpc\SenderSetTokenRequestStruct $argument,
+    public function SenderSetToken(\SenderGrpc\SenderSetTokenRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSetToken',
         $argument,
-        ['\Company\SenderGrpc\SenderSetTokenResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSetTokenResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSetConfigRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSetConfigRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSetConfig(\Company\SenderGrpc\SenderSetConfigRequestStruct $argument,
+    public function SenderSetConfig(\SenderGrpc\SenderSetConfigRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSetConfig',
         $argument,
-        ['\Company\SenderGrpc\SenderSetConfigResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSetConfigResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderClearConfigRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderClearConfigRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderClearConfig(\Company\SenderGrpc\SenderClearConfigRequestStruct $argument,
+    public function SenderClearConfig(\SenderGrpc\SenderClearConfigRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderClearConfig',
         $argument,
-        ['\Company\SenderGrpc\SenderClearConfigResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderClearConfigResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSendEventRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendEventRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendEvent(\Company\SenderGrpc\SenderSendEventRequestStruct $argument,
+    public function SenderSendEvent(\SenderGrpc\SenderSendEventRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendEvent',
         $argument,
-        ['\Company\SenderGrpc\SenderSendEventResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendEventResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSendEventToAllRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendEventToAllRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendEventToAll(\Company\SenderGrpc\SenderSendEventToAllRequestStruct $argument,
+    public function SenderSendEventToAll(\SenderGrpc\SenderSendEventToAllRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendEventToAll',
         $argument,
-        ['\Company\SenderGrpc\SenderSendEventToAllResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendEventToAllResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderGetOnlineConnectionsByUserId(\Company\SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument,
+    public function SenderGetOnlineConnectionsByUserId(\SenderGrpc\SenderGetOnlineConnectionsByUserIdRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderGetOnlineConnectionsByUserId',
         $argument,
-        ['\Company\SenderGrpc\SenderGetOnlineConnectionsByUserIdResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderGetOnlineConnectionsByUserIdResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderCloseConnectionsByUserId(\Company\SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument,
+    public function SenderCloseConnectionsByUserId(\SenderGrpc\SenderCloseConnectionsByUserIdRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderCloseConnectionsByUserId',
         $argument,
-        ['\Company\SenderGrpc\SenderCloseConnectionsByUserIdResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderCloseConnectionsByUserIdResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderCloseConnectionsByUserIdWithWait(\Company\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument,
+    public function SenderCloseConnectionsByUserIdWithWait(\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderCloseConnectionsByUserIdWithWait',
         $argument,
-        ['\Company\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderCloseConnectionsByUserIdWithWaitResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderCloseConnectionsByDeviceIdWithWait(\Company\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument,
+    public function SenderCloseConnectionsByDeviceIdWithWait(\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderCloseConnectionsByDeviceIdWithWait',
         $argument,
-        ['\Company\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderCloseConnectionsByDeviceIdWithWaitResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderAddTaskPushNotification(\Company\SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument,
+    public function SenderAddTaskPushNotification(\SenderGrpc\SenderAddTaskPushNotificationRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderAddTaskPushNotification',
         $argument,
-        ['\Company\SenderGrpc\SenderAddTaskPushNotificationResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderAddTaskPushNotificationResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderGetOnlineUsersRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderGetOnlineUsersRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderGetOnlineUsers(\Company\SenderGrpc\SenderGetOnlineUsersRequestStruct $argument,
+    public function SenderGetOnlineUsers(\SenderGrpc\SenderGetOnlineUsersRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderGetOnlineUsers',
         $argument,
-        ['\Company\SenderGrpc\SenderGetOnlineUsersResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderGetOnlineUsersResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderAddUsersToThreadRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderAddUsersToThreadRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderAddUsersToThread(\Company\SenderGrpc\SenderAddUsersToThreadRequestStruct $argument,
+    public function SenderAddUsersToThread(\SenderGrpc\SenderAddUsersToThreadRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderAddUsersToThread',
         $argument,
-        ['\Company\SenderGrpc\SenderAddUsersToThreadResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderAddUsersToThreadResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSendTypingEventRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendTypingEventRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendTypingEvent(\Company\SenderGrpc\SenderSendTypingEventRequestStruct $argument,
+    public function SenderSendTypingEvent(\SenderGrpc\SenderSendTypingEventRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendTypingEvent',
         $argument,
-        ['\Company\SenderGrpc\SenderSendTypingEventResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendTypingEventResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSendVoIPRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendVoIPRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendVoIP(\Company\SenderGrpc\SenderSendVoIPRequestStruct $argument,
+    public function SenderSendVoIP(\SenderGrpc\SenderSendVoIPRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendVoIP',
         $argument,
-        ['\Company\SenderGrpc\SenderSendVoIPResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendVoIPResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SenderSendIncomingCallRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendIncomingCallRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendIncomingCall(\Company\SenderGrpc\SenderSendIncomingCallRequestStruct $argument,
+    public function SenderSendIncomingCall(\SenderGrpc\SenderSendIncomingCallRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendIncomingCall',
         $argument,
-        ['\Company\SenderGrpc\SenderSendIncomingCallResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendIncomingCallResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\ClearUserNotificationCacheRequestStruct $argument input argument
+     * @param \SenderGrpc\ClearUserNotificationCacheRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function ClearUserNotificationCache(\Company\SenderGrpc\ClearUserNotificationCacheRequestStruct $argument,
+    public function ClearUserNotificationCache(\SenderGrpc\ClearUserNotificationCacheRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/ClearUserNotificationCache',
         $argument,
-        ['\Company\SenderGrpc\ClearUserNotificationCacheResponseStruct', 'decode'],
+        ['\SenderGrpc\ClearUserNotificationCacheResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SystemStatusRequestStruct $argument input argument
+     * @param \SenderGrpc\SystemStatusRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SystemStatus(\Company\SenderGrpc\SystemStatusRequestStruct $argument,
+    public function SystemStatus(\SenderGrpc\SystemStatusRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SystemStatus',
         $argument,
-        ['\Company\SenderGrpc\SystemStatusResponseStruct', 'decode'],
+        ['\SenderGrpc\SystemStatusResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SystemTraceGoroutineRequestStruct $argument input argument
+     * @param \SenderGrpc\SystemTraceGoroutineRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SystemTraceGoroutine(\Company\SenderGrpc\SystemTraceGoroutineRequestStruct $argument,
+    public function SystemTraceGoroutine(\SenderGrpc\SystemTraceGoroutineRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SystemTraceGoroutine',
         $argument,
-        ['\Company\SenderGrpc\SystemTraceGoroutineResponseStruct', 'decode'],
+        ['\SenderGrpc\SystemTraceGoroutineResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SystemTraceMemoryRequestStruct $argument input argument
+     * @param \SenderGrpc\SystemTraceMemoryRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SystemTraceMemory(\Company\SenderGrpc\SystemTraceMemoryRequestStruct $argument,
+    public function SystemTraceMemory(\SenderGrpc\SystemTraceMemoryRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SystemTraceMemory',
         $argument,
-        ['\Company\SenderGrpc\SystemTraceMemoryResponseStruct', 'decode'],
+        ['\SenderGrpc\SystemTraceMemoryResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Company\SenderGrpc\SystemCpuProfileRequestStruct $argument input argument
+     * @param \SenderGrpc\SystemCpuProfileRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SystemCpuProfile(\Company\SenderGrpc\SystemCpuProfileRequestStruct $argument,
+    public function SystemCpuProfile(\SenderGrpc\SystemCpuProfileRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SystemCpuProfile',
         $argument,
-        ['\Company\SenderGrpc\SystemCpuProfileResponseStruct', 'decode'],
+        ['\SenderGrpc\SystemCpuProfileResponseStruct', 'decode'],
         $metadata, $options);
     }
 
     /**
      * двунаправленный сервис отправки ws
-     * @param \Company\SenderGrpc\SenderSendEventBatchingRequestStruct $argument input argument
+     * @param \SenderGrpc\SenderSendEventBatchingRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function SenderSendEventBatching(\Company\SenderGrpc\SenderSendEventBatchingRequestStruct $argument,
+    public function SenderSendEventBatching(\SenderGrpc\SenderSendEventBatchingRequestStruct $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/senderGrpc.sender/SenderSendEventBatching',
         $argument,
-        ['\Company\SenderGrpc\SenderSendEventBatchingResponseStruct', 'decode'],
+        ['\SenderGrpc\SenderSendEventBatchingResponseStruct', 'decode'],
         $metadata, $options);
     }
 
